@@ -11,7 +11,8 @@
 <a href="https://raw.githubusercontent.com/bit15k/halo-theme-next/main/LICENSE" target="_blank"><img alt="Dynamic YAML Badge" src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbit15k%2Fhalo-theme-next%2Fmain%2Ftheme.yaml&query=%24.spec.license%5B%3A1%5D.name&label=License"></a>
 </p>
 <p align="center">
-<a href="https://www.logdict.com/archives/AirCloud" target="_blank"><img width="100%" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/next-schemes.png"/></a>
+<a href="https://www.logdict.com/archives/AirCloud" target="_blank">
+<img width="100%" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/next-schemes.png"/></a>
 </p>
 <p align="center">
 
@@ -51,7 +52,9 @@
 
 - 提 [issue](https://github.com/bit15k/halo-theme-next/issues)
 - 留言
-- 交流群 
-  ![](https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/contact-qq.jpg)
+- 交流群   
+<img width="20%" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/contact-qq.jpg"/></a>
+
+ 
 
 
