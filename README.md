@@ -72,8 +72,8 @@
 ## 问题联系
 
 - 提 [issue](https://github.com/bit15k/halo-theme-next/issues)  
-- 留言 
-- 加群
+- [网站留言](https://www.logdict.com/archives/halo-theme-next)
+- [加群](https://qm.qq.com/q/z45cKGUz6w)
 
 如果你对主题有什么建议或者意见，欢迎提 PR & issue。  
 扫描或点击二维码加入交流群   
