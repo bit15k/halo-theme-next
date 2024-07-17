@@ -75,6 +75,6 @@
  
 ## 相关文档
 
-关注项目主页 https://github.com/halo-dev/halo-theme-next?tab=readme-ov-file#%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95
+关注[项目主页](https://github.com/halo-dev/halo-theme-next?tab=readme-ov-file#%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95)
 
 
