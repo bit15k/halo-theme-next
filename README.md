@@ -32,7 +32,7 @@
 | LogDict                                                                                                 | https://www.logdict.com/                                                                                |
 | [更多](https://github.com/bit15k/halo-theme-next?tab=readme-ov-file#%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88) | [更多](https://github.com/bit15k/halo-theme-next?tab=readme-ov-file#%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88) |
 
-如果你也使用该主题，欢迎提交[issue](https://github.com/bit15k/halo-theme-next/issues)用于展示
+如果你也使用该主题，欢迎将你的网站信息以 [issue](https://github.com/bit15k/halo-theme-next/issues) 形式提交，将用于展示
 
 ## 主题介绍
 
@@ -82,7 +82,7 @@
 
 ## 相关文档
 
-- [关注项目主页陆续更新](https://github.com/bit15k/halo-theme-next?tab=readme-ov-file#%E7%9B%B8%E5%85%B3%E6%96%87%E6%A1%A3)
+- 相关文档请关注[项目主页](https://github.com/bit15k/halo-theme-next?tab=readme-ov-file#%E7%9B%B8%E5%85%B3%E6%96%87%E6%A1%A3)，将陆续更新。
 
 ## 参与贡献
 
