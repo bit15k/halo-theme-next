@@ -53,7 +53,7 @@
 
 ### 应用市场安装
 
-- [Halo 应用市场](https://www.halo.run/store/) 直接搜索主题名称下载安装
+- [Halo 应用市场](https://www.halo.run/store/apps) 直接**搜索主题名称**下载安装
 
 
 ### 本地安装
