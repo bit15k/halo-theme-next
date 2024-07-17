@@ -20,7 +20,7 @@ spec:
     - name: "GPL-3.0"
       url: "https://github.com/bit15k/halo-theme-next/blob/main/LICENSE"
   hexo:
-    - version: "7.3.0"
-    - theme:
-        name: "Next"
-        version: "8.20.0"
+    version: "7.3.0"
+    theme:
+      name: "Next"
+      version: "8.20.0"
