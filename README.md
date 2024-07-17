@@ -17,9 +17,7 @@
 <a href="https://raw.githubusercontent.com/bit15k/halo-theme-next/main/LICENSE" target="_blank"><img alt="Dynamic YAML Badge" src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbit15k%2Fhalo-theme-next%2Fmain%2Ftheme.yaml&query=%24.spec.license%5B%3A1%5D.name&label=License"></a>
 </p>
 <p align="center">
-<a href="https://github.com/bit15k/halo-theme-next" target="_blank">
-<img width="100%" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/next-schemes.png"/></a>
-</p>
+<a href="https://github.com/bit15k/halo-theme-next" target="_blank"><img width="100%" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/next-schemes.png"/></a></p>
 <p align="center">
 
 [主题预览](#主题预览图) | [快速上手](#快速安装) | [使用文档](#相关文档) | [联系交流](#问题联系) | [参与开发](#相关文档)
@@ -82,7 +80,7 @@
 
 ## 相关文档
 
-- [关注项目主页更新](https://github.com/halo-dev/halo-theme-next?tab=readme-ov-file#%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95)
+- [关注项目主页陆续更新](https://github.com/bit15k/halo-theme-next?tab=readme-ov-file#%E7%9B%B8%E5%85%B3%E6%96%87%E6%A1%A3)
 
 ## 参与贡献
 
