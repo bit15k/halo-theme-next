@@ -3,7 +3,13 @@
 <a href="https://www.logdict.com/archives/AirCloud" target="_blank">
 <img width="100px" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/logo.svg">
 </a>
+
 <h1 align="center">Next for Halo 2+</h1>
+<p align="center">
+
+[主题预览](#主题预览图) | [快速上手](https://www.logdict.com/archives/AirCloud#%E4%B8%BB%E9%A2%98%E4%B8%8B%E8%BD%BD) | [使用文档](https://www.logdict.com/archives/AirCloud)
+
+</p>
 <p align="center"> 
 <a href="https://halo.run" target="_blank"><img alt="Dynamic YAML Badge" src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbit15k%2Fhalo-theme-next%2Fmain%2Ftheme.yaml&query=%24.spec.requires&label=Halo&color=blue"></a>
 <a href="https://www.logdict.com/archives/AirCloud" target="_blank"><img alt="Dynamic YAML Badge" src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbit15k%2Fhalo-theme-next%2Fmain%2Ftheme.yaml&query=%24.spec.version&label=Release&color=red"></a>
@@ -14,11 +20,7 @@
 <a href="https://www.logdict.com/archives/AirCloud" target="_blank">
 <img width="100%" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/next-schemes.png"/></a>
 </p>
-<p align="center">
 
-[主题预览](#主题预览图) | [快速上手](https://www.logdict.com/archives/AirCloud#%E4%B8%BB%E9%A2%98%E4%B8%8B%E8%BD%BD) | [使用文档](https://www.logdict.com/archives/AirCloud)
-
-</p>
 </div>
 
 ## 主题介绍
