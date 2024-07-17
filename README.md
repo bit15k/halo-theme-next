@@ -52,8 +52,8 @@
 
 - 提 [issue](https://github.com/bit15k/halo-theme-next/issues)
 - 留言
-- 交流群   
-<img width="20%" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/contact-qq.jpg"/></a>
+- 扫描或点击二维码加入交流群   
+<a href="https://qm.qq.com/q/z45cKGUz6w" target="_blank"><img width="30%" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/contact-qq.jpg"/></a>
 
  
 
