@@ -34,7 +34,7 @@
 | LogDict                                                                                                 | https://www.logdict.com/                                                                                |
 | [更多](https://github.com/bit15k/halo-theme-next?tab=readme-ov-file#%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88) | [更多](https://github.com/bit15k/halo-theme-next?tab=readme-ov-file#%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88) |
 
-如果你也是用该主题欢迎提交 [issue](https://github.com/bit15k/halo-theme-next/issues)
+如果你也使用该主题，欢迎提交[issue](https://github.com/bit15k/halo-theme-next/issues)用于展示
 
 ## 主题介绍
 
