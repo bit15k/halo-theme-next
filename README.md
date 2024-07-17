@@ -29,10 +29,10 @@
 
 ## 主题预览
 
-| 站点名称    | 站点地址                     |
-|---------|--------------------------|
-| LogDict | https://www.logdict.com/ |
-| [更多](https://github.com/bit15k/halo-theme-next?tab=readme-ov-file#%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88)  | [更多](https://github.com/bit15k/halo-theme-next?tab=readme-ov-file#%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88)                   |
+| 站点名称                                                                                                    | 站点地址                                                                                                    |
+|---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
+| LogDict                                                                                                 | https://www.logdict.com/                                                                                |
+| [更多](https://github.com/bit15k/halo-theme-next?tab=readme-ov-file#%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88) | [更多](https://github.com/bit15k/halo-theme-next?tab=readme-ov-file#%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88) |
 
 如果你也是用该主题欢迎提交 [issue](https://github.com/bit15k/halo-theme-next/issues)
 
@@ -40,7 +40,7 @@
 
 > «NexT» 是一款风格优雅的高质量 [Hexo](https://hexo.io) 主题，自点点滴滴中用爱雕琢而成。
 
-该主题移植于 [Hexo-Theme-Next](https://github.com/next-theme/hexo-theme-next)，感谢开发出该主题.
+该主题移植于 [Hexo-Theme-Next](https://github.com/next-theme/hexo-theme-next)，感谢开发出该主题，本主题将移植绝大部分功能。
 
 ## 移植关系
 
