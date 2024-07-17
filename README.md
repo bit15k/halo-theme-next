@@ -51,6 +51,7 @@
 
 - 提 [issue](https://github.com/bit15k/halo-theme-next/issues)
 - 留言
-- 
+- 交流群 
+  ![](https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/contact-qq.jpg)
 
 
