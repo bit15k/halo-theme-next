@@ -35,6 +35,7 @@
 | [更多](https://github.com/bit15k/halo-theme-next?tab=readme-ov-file#%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88)  | [更多](https://github.com/bit15k/halo-theme-next?tab=readme-ov-file#%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88)                   |
 
 如果你也是用该主题欢迎提交 [issue](https://github.com/bit15k/halo-theme-next/issues)
+
 ## 主题介绍
 
 > «NexT» 是一款风格优雅的高质量 [Hexo](https://hexo.io) 主题，自点点滴滴中用爱雕琢而成。
