@@ -422,7 +422,10 @@ spec:
           name: avatar
           label: 头像设置
           help: ""
-          value: [ { "url": "", "rounded": 0,"rotated": 0 } ]
+          value:
+            url: ""
+            rounded: 0
+            rotated: 0
           children:
             - $formkit: text
               name: url
@@ -476,7 +479,7 @@ spec:
               value: 1
             - label: 隐藏
               value: 0
-        # 侧栏社交链接
+#        # 侧栏社交链接
 #        - $formkit: group
 #          name: social
 #          label: 社交链接栏
@@ -521,7 +524,7 @@ spec:
 #                  value: 1
 #                - label: 关闭
 #                  value: 0
-        # 侧栏友链
+#        # 侧栏友链
 #        - $formkit: group
 #          name: links
 #          label: 友链栏
@@ -567,7 +570,7 @@ spec:
 #                  name: icon
 #                  label: 图标
 #                  value: ""
-        # 侧栏目录
+#        # 侧栏目录
         - $formkit: group
           name: toc
           label: 文章目录
