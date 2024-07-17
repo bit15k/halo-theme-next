@@ -3,7 +3,7 @@
 <a href="https://www.logdict.com/archives/AirCloud" target="_blank">
 <img width="100px" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/logo.svg">
 </a>
-<h1 align="center">Halo Theme Next</h1>
+<h1 align="center">Next for Halo 2+</h1>
 <p align="center"> 
 <a href="https://halo.run" target="_blank"><img alt="Dynamic YAML Badge" src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbit15k%2Fhalo-theme-next%2Fmain%2Ftheme.yaml&query=%24.spec.requires&label=Halo&color=blue"></a>
 <a href="https://www.logdict.com/archives/AirCloud" target="_blank"><img alt="Dynamic YAML Badge" src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbit15k%2Fhalo-theme-next%2Fmain%2Ftheme.yaml&query=%24.spec.version&label=Release&color=red"></a>
@@ -26,6 +26,12 @@
 > «NexT» 是一款风格优雅的高质量 [Hexo](https://hexo.io) 主题，自点点滴滴中用爱雕琢而成。
 
 该主题移植于 [Hexo-Theme-Next](https://github.com/next-theme/hexo-theme-next)，感谢开发出该主题.
+
+## 移植关系
+
+| Halo Next 版本                                                                                                                                                                                                                 | Halo 版本                                                                                                                                                                                                                 | Hexo Next 版本                                                                                                                                                                                                                                                  | Hexo 版本                                                                                                                                                                                                                                          |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <img alt="Dynamic YAML Badge" src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbit15k%2Fhalo-theme-next%2Fmain%2Ftheme.yaml&query=%24.spec.version&label=Halo%20Next&color=red"> | <img alt="Dynamic YAML Badge" src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbit15k%2Fhalo-theme-next%2Fmain%2Ftheme.yaml&query=%24.spec.requires&label=Halo&color=blue"> | <img alt="Dynamic YAML Badge" src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbit15k%2Fhalo-theme-next%2Fmain%2Ftemplates%2Fassets%2Fprofile%2Fonline.yaml&query=%24.spec.hexo.theme.version&label=Hexo%20Next"> | <img alt="Dynamic YAML Badge" src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbit15k%2Fhalo-theme-next%2Fmain%2Ftemplates%2Fassets%2Fprofile%2Fonline.yaml&query=%24.spec.hexo.version&label=Hexo"> |
 
 
 ## 快速安装
@@ -50,11 +56,25 @@
 
 ## 问题联系
 
-- 提 [issue](https://github.com/bit15k/halo-theme-next/issues)
-- 留言
-- 扫描或点击二维码加入交流群   
+- 提 [issue](https://github.com/bit15k/halo-theme-next/issues)  
+- 留言 
+- 加群
+
+如果你对主题有什么建议或者意见，欢迎提 PR & issue。  
+扫描或点击二维码加入交流群   
 <a href="https://qm.qq.com/q/z45cKGUz6w" target="_blank"><img width="30%" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/contact-qq.jpg"/></a>
 
+## 参与贡献
+
+如果你想帮助完善 Next 主题，请：
+
+- 点 star
+- 提 issue
+- 修 bugs
+- 推 pr
  
+## 相关文档
+
+关注项目主页 https://github.com/halo-dev/halo-theme-next?tab=readme-ov-file#%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95
 
 
