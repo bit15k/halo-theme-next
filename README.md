@@ -38,7 +38,9 @@
 
 > «NexT» 是一款风格优雅的高质量 [Hexo](https://hexo.io) 主题，自点点滴滴中用爱雕琢而成。
 
-该主题移植于 [Hexo-Theme-Next](https://github.com/next-theme/hexo-theme-next)，感谢开发出该主题，**本主题将移植原主题绝大部分功能**。
+基于 Halo 平台的 Next 主题，该主题移植于 [Hexo-Theme-Next](https://github.com/next-theme/hexo-theme-next)，**本主题将移植原主题绝大部分功能**，适用于 Halo 2+  
+
+在此，感谢原主题的所有开发者！  
 
 ## 移植关系
 
