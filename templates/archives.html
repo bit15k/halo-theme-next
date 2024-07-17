@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{_layout :: html(head = null,content = ~{::content}, sidebar = ~{::sidebar}, have_comment = 0, class = 'archive posts-collapse', is_home = 1, is_archive = 0)}"
+>
+    <!--分类集合-->
+    <th:block th:fragment="content">
+        <div class="post-block animated fadeIn">
+            <div class="post-content">
+                <div class="collection-title">
+                    <span class="collection-header animated fadeInLeft">Good! 85 posts in total. Keep on posting.</span>
+                </div>
+                <th:block th:each="archive : ${archives.items}">
+                    <div class="collection-year">
+                        <span class="collection-header animated fadeInLeft" th:text="${archive.year}">2024<span
+                                class="collection-year-count">6</span></span>
+                    </div>
+                    <th:block th:each="month : ${archive.months}">
+
+                        <article itemscope="" itemtype="http://schema.org/Article" th:each="post : ${month.posts}">
+                            <header class="post-header animated fadeInDown">
+                                <div class="post-meta-container">
+                                    <time itemprop="dateCreated" datetime="2024-07-09T23:26:46+08:00"
+                                          content="2024-07-09" th:text="${#dates.format(post.metadata.creationTimestamp,'yyyy-MM-dd')}">
+                                        07-09
+                                    </time>
+                                </div>
+                                <div class="post-title">
+                                    <a class="post-title-link" th:href="@{${post.status.permalink}}" itemprop="url">
+                                        <span itemprop="name" th:text="${post.spec.title}">test-category</span>
+                                    </a>
+                                </div>
+                            </header>
+                        </article>
+                    </th:block>
+                </th:block>
+            </div>
+        </div>
+    </th:block>
+    <th:block th:fragment="sidebar" th:replace="~{_macro/sidebar::render(display_toc=0)}"></th:block>
+
+</html>

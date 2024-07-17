@@ -1,0 +1,49 @@
+apiVersion: v1alpha1
+kind: AnnotationSetting
+metadata:
+  name: theme-next-menuitem-1a34
+spec:
+  targetRef:
+    group: ""
+    kind: MenuItem
+  formSchema:
+    # 菜单项扩展
+    - $formkit: "text"
+      name: "icon_class"
+      label: "图标样式 - Next"
+
+---
+
+# 文章元数据扩展 see https://theme-next.js.org/docs/advanced-settings/front-matter.html?highlight=sticky
+apiVersion: v1alpha1
+kind: AnnotationSetting
+metadata:
+  name: theme-next-post-1a34
+spec:
+  targetRef:
+    group: "content.halo.run"
+    kind: Post
+  formSchema:
+    # 是否显示侧边栏
+    - $formkit: "select"
+      name: "sidebar"
+      help: ""
+      label: "是否显示侧边栏 - Next"
+      value: 1
+      options:
+        - label: 显示
+          value: 1
+        - label: 隐藏
+          value: 0
+    # huk
+    - $formkit: "select"
+      name: "direction"
+      help: ""
+      label: "direction - Next"
+      value: "0"
+      options:
+        - label: rtl
+          value: "rtl"
+        - label: 不设置
+          value: ""
+

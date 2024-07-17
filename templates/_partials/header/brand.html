@@ -1,0 +1,59 @@
+<!--站点标题区域-->
+<th:block th:fragment="brand(is_home,is_archive)">
+<div class="site-brand-container">
+    <!--hud huk-->
+    <div class="site-nav-toggle">
+        <div class="toggle" aria-label="{{ __('accessibility.nav_toggle') }}" role="button">
+            <th:block th:if="${theme.config.basic.menu.enabled eq 1}">
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+            </th:block>
+        </div>
+    </div>
+
+    <div class="site-meta">
+        <!--Muse布局的LOGO区域-->
+        <th:block th:if="${theme.config.basic.custom_logo.enabled eq 1 and theme.config.basic.scheme == 'Muse'}">
+            <img class="custom-logo-image" th:src="${theme.config.basic.custom_logo.url}" alt="">
+        </th:block>
+        <!--侧栏最上方标题-->
+        <a href="/" class="brand" rel="start">
+            <i class="logo-line"></i>
+            <th:block th:if="${theme.config.basic.site.type eq 1}">
+                <th:block th:if="${is_home eq 1 or is_archive eq 1}">
+                <h1 class="site-title" style="opacity: 1; top: 0px;" th:text="${site.title}">Hexo</h1>
+                </th:block>
+                <th:block th:if="${!(is_home eq 1 or is_archive eq 1)}">
+                <p class="site-title" style="opacity: 1; top: 0px;" th:text="${site.title}">Hexo</p>
+                </th:block>
+            </th:block>
+            <th:block th:if="${theme.config.basic.site.type eq 0}">
+                <th:block th:if="${is_home eq 1 or is_archive eq 1}">
+                    <h1 class="site-title" style="opacity: 1; top: 0px;" th:text="${theme.config.basic.site.title}">Hexo</h1>
+                </th:block>
+                <th:block th:if="${!(is_home eq 1 or is_archive eq 1)}">
+                    <p class="site-title" style="opacity: 1; top: 0px;" th:text="${theme.config.basic.site.title}">Hexo</p>
+                </th:block>
+            </th:block>
+            <i class="logo-line"></i>
+        </a>
+        <!--站点二级标题-->
+        <th:block th:if="${site.subtitle ne ''} and ${theme.config.basic.site.type eq 1}">
+            <p class="site-subtitle" itemprop="description" th:text="${site.subtitle}"></p>
+        </th:block>
+        <th:block th:if="${theme.config.basic.site.subtitle ne 0 and theme.config.basic.site.type eq 0}">
+            <p class="site-subtitle" itemprop="description" th:text="${theme.config.basic.site.subtitle}"></p>
+        </th:block>
+        <!--Gemini or Pisces logo-->
+        <th:block th:if="${theme.config.basic.custom_logo.enabled ne 1 and (theme.config.basic.scheme eq 'Gemini' or theme.config.basic.scheme eq 'Pisces')}">
+            <img class="custom-logo-image" th:src="${site.logo}" alt="">
+        </th:block>
+    </div>
+    <!--hud huk 自带搜索弹窗-->
+    <div class="site-nav-right">
+        <div class="toggle popup-trigger" aria-label="Search" role="button" style="opacity: 1; top: 0px;">
+        </div>
+    </div>
+</div>
+</th:block>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{_layout :: html(head = null,content = ~{::content}, sidebar = ~{::sidebar}, have_comment = 0, class = 'page posts-expand', is_home = 1, is_archive = 0)}"
+>
+  <!--分类集合-->
+  <th:block th:fragment="content">
+    <div class="post-block animated fadeIn" lang="zh">
+      <!--分类标题-->
+      <header class="post-header animated fadeInDown">
+        <h1 class="post-title" itemprop="name headline">分类
+        </h1>
+        <div class="post-meta-container"></div>
+      </header>
+      <div class="post-body animated fadeInDown">
+        <div class="category-all-page">
+          <!--分类总数-->
+          <div class="category-all-title" th:with="stats = ${siteStatsFinder.getStats()}">
+            <span th:text="${stats.category}"></span> 条
+          </div>
+          <div class="category-all">
+            <ul class="category-list">
+              <li class="category-list-item" th:each="category : ${categories}">
+                <!--子分类标题-->
+                <a class="category-list-link" th:href="${category.status.permalink}" th:text="${category.spec.displayName}">Sports</a>
+                <!--子分类文章个数-->
+                <span class="category-list-count" th:text="${category.status.postCount}">1</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+  </th:block>
+  <th:block th:fragment="sidebar" th:replace="~{_macro/sidebar::render(display_toc=0)}"></th:block>
+
+</html>

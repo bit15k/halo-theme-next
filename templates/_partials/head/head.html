@@ -1,0 +1,53 @@
+<meta charset="utf-8">
+<!--darkmode & color_dark & color_light-->
+<th:block th:if="${theme.config.basic.darkmode eq 1}">
+    <meta name="theme-color"  th:content="${theme.config.other.theme_color.light}" media="(prefers-color-scheme: light)">
+    <meta name="theme-color"  th:content="${theme.config.other.theme_color.dark}" media="(prefers-color-scheme: dark)">
+</th:block>
+<th:block th:if="${theme.config.basic.darkmode eq 0}">
+    <meta name="theme-color"  th:content="${theme.config.other.theme_color.dark}">
+</th:block>
+<!--hud config.meta_generator-->
+
+<!--hud preconnect-->
+<link th:if="${theme.config.scheme.preconnect eq 1}" rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+<!--hud favicon-->
+<!--    <link th:if="${theme.config.site.favicon.apple_touch_icon!=null}" rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">-->
+<!--    <link th:if="${theme.config.site.favicon.mdeium!=null}" rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">-->
+<!--    <link th:if="${theme.config.site.favicon.small!=null}" rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">-->
+<!--    <link th:if="${theme.config.site.favicon.safari_pinned_tab!=null}" rel="mask-icon" href="/images/logo.svg" color="#222">-->
+<!--hud site_verification-->
+
+<!--核心css styl编译后-->
+<link th:href="@{/assets/css/main.css}" rel="stylesheet">
+
+<!--hud next_font-->
+<!--hud fontawesome-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+<!--hud animate_css-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+<!--hud fancybox_css-->
+<!--hud pace.enable     -->
+<!--hud 自动生成的数据后续可以优化掉-->
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script>
+<!--hud config.js-->
+<script th:src="@{/assets/js/config.js}"></script>
+<!--hud head.unique -->
+<!--<meta property="og:type" content="website">-->
+<!--<meta property="og:title" content="Hexo">-->
+<!--<meta property="og:url" content="http://example.com/index.html">-->
+<!--<meta property="og:site_name" content="Hexo">-->
+<!--<meta property="og:locale" content="en_US">-->
+<!--<meta property="article:author" content="John Doe">-->
+<!--<meta name="twitter:card" content="summary">-->
+
+
+<!--<link rel="canonical" href="http://example.com/">-->
+
+
+
+<!--<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>-->
+
+<!--<script class="next-config" data-name="calendar" type="application/json">""</script>-->
+

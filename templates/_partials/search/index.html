@@ -1,0 +1,28 @@
+<!--hud-->
+<th:block th:if="${1 ge 2}">
+<div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+            <div class="search-input-container">
+                <!--hud huk placeholder="{{ __('search.placeholder') }}"-->
+                <input autocomplete="off" autocapitalize="off" maxlength="80"
+                       placeholder="" spellcheck="false"
+                       type="search" class="search-input">
+            </div>
+            <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+        </div>
+        <div class="search-result-container">
+            <div class="search-result-icon">
+                <i th:class="${1 ge 2}?'fab fa-algolia`:`fa-5x`"></i>
+                <i th:class="${1 ge 2}?'fa fa-spinner`:`fa-5x`"></i>
+                <i th:class="${1 ge 2}?'fa-5x '"></i>
+            </div>
+        </div>
+    </div>
+</div>
+</th:block>

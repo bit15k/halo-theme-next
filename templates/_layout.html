@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+
+<!--整体布局-->
+<html lang="zh" xmlns:th="https://www.thymeleaf.org" th:fragment="html(head,content,sidebar,class,is_home,is_archive,have_comment)">
+    <!--头部部分-->
+    <head>
+        <!--引入head-->
+        <th:block th:replace="_partials/head/head"></th:block>
+        <!--引入head-unique 未做 临时填充-->
+        <th:block th:replace="_partials/head/head-unique"></th:block>
+        <!--站点标题-->
+        <title th:text="${site.title}">标题</title>
+        <!--hud 引入第三方统计代码-->
+        <!--<th:block th:replace="_third-party/analytics/index"></th:block>-->
+
+        <!--hud 注入head位置-->
+
+        <!--hud 引入 noscript.css-->
+        <!--<noscript>-->
+        <!--    <link rel="stylesheet" href="/noscript.css">-->
+        <!--</noscript>-->
+    </head>
+
+    <!--body-->
+    <!--hud use motion  -->
+    <body itemscope itemtype="http://schema.org/WebPage" th:class="${theme.config.other.motion.enabled ne ''}?'use-motion'">
+        <div class="headband"></div>
+        <!--main 主要容器-->
+        <main class="main">
+            <!--侧半边 含sidebar-->
+            <!--huk style="opacity: 1; top: 0px;"  -->
+            <div class="column" style="opacity: 1; top: 0px;">
+                <!--网站标题和菜单区域-->
+                <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+                    <!--站点信息区域-->
+                    <th:block th:replace="_partials/header/index"></th:block>
+                </header>
+                <!--用户信息 头像 文章目录区域 -->
+                <th:block th:if="${theme.config.sidebar.sidebar.display!='remove'}">
+                    <th:block th:replace="${sidebar}"></th:block>
+                </th:block>
+            </div>
+            <!--右半部分文章或文章列表区域-->
+            <div th:class="'main-inner '+${class}">
+                <!--hud 二级菜单，参考next官方docs顶部-->
+                <!--<th:block th:replace="_partials/header/sub-menu"></th:block>-->
+                <!--文章内容区-->
+                <th:block th:replace="${content}"></th:block>
+                <!--评论区-->
+                <th:block th:if="${have_comment eq 1}">
+                    <th:block th:replace="_partials/comments"></th:block>
+                </th:block>
+            </div>
+        </main>
+        <!--footer-->
+        <footer class="footer">
+            <div class="footer-inner">
+                <!--hud 多语言-->
+                <!--<th:block th:replace="_partials/languages"></th:block>-->
+                <!--hud 临时填充-->
+                <th:block th:replace="_partials/footer"></th:block>
+            </div>
+        </footer>
+
+
+        <noscript>
+            <div class="noscript-warning">Halo Theme NexT works best with JavaScript enabled</div>
+        </noscript>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+                integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+        <!--以下 未做 无填充 start-->
+        <th:block th:replace="_partials/widgets"></th:block>
+        <th:block th:replace="_scripts/index"></th:block>
+        <!--<th:block th:replace="_third-party/index"></th:block>-->
+        <!--<th:block th:replace="_third-party/statistics/index.njk"></th:block>-->
+        <!--<th:block th:replace="_third-party/math/index.njk"></th:block>-->
+        <!--<th:block th:replace="_third-party/quicklink.njk"></th:block>-->
+        <!--end-->
+        <!-- 注入点 未做 start-->
+        <!--end-->
+
+    </body>
+</html>

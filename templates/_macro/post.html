@@ -1,0 +1,101 @@
+<!--文章区域-->
+<th:block th:fragment="post(post,is_index)">
+    <div class="post-block animated fadeIn">
+        <!-- hud  {# Gallery support #}-->
+        <!--    {{ post_gallery(post.photos) }}-->
+        <article class="post-content" itemscope="" itemtype="http://schema.org/Article" lang="">
+            <link th:href="@{${post.status.permalink}}" itemprop="mainEntityOfPage">
+            <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <!--hud-->
+                <meta content="" itemprop="image">
+                <!--hud-->
+                <meta content="" itemprop="name">
+            </span>
+            <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+                <!--hud-->
+                <meta content="" itemprop="name">
+                <!--hud-->
+                <meta content="" itemprop="description">
+            </span>
+            <span hidden itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+                <!--hud-->
+                <meta content="" itemprop="name">
+                <!--hud-->
+                <meta content="" itemprop="description">
+            </span>
+            <!--文章标题区域-->
+            <header class="post-header animated fadeInDown">
+                <!--非首页，文章页样式-->
+                <th:block th:if="${is_index eq 0}">
+                    <h1 class="post-title" itemprop="name headline">
+                      <!--文章置顶样式  -->
+                      <span th:if="${post.spec.pinned}" class="post-sticky-flag" title="Sticky">
+                        <i class="fa fa-thumbtack"></i>
+                      </span>
+                      <a th:href="${post.status.permalink}" class="post-title-link" itemprop="url" th:text="${post.spec.title}"></a>
+                    </h1>
+                </th:block>
+                <!--首页文章样式-->
+                <th:block th:if="${is_index eq 1}">
+                    <h2 class="post-title" itemprop="name headline">
+                        <!--文章置顶样式  -->
+                        <span th:if="${post.spec.pinned}" class="post-sticky-flag" title="Sticky">
+                        <i class="fa fa-thumbtack"></i>
+                        </span>
+                        <a th:href="${post.status.permalink}" class="post-title-link" itemprop="url" th:text="${post.spec.title}"></a>
+                    </h2>
+                </th:block>
+                <!--hud-->
+                <div class="post-meta-container">
+                    <th:block th:replace="~{_partials/post/post-meta::post-meta(post = ${post})}"></th:block>
+                    <th:block th:if="${post.status.excerpt ne '' and is_index eq 1}">
+                        <!--<div class="post-description" th:text="${post.status.excerpt}"></div>-->
+                    </th:block>
+
+                </div>
+            </header>
+
+            <!--文章内容区域-->
+            <!--首页文章内容区域样式-->
+            <th:block th:if="${is_index eq 1 and (theme.config.post.excerpt_description eq 1 or post.status.excerpt ne '')}">
+                <div class="post-body animated fadeInDown" itemprop="articleBody">
+                    <p th:text="${post.status.excerpt}"></p>
+                    <div class="post-button">
+                        <a class="btn" th:href="@{${post.status.permalink}}" rel="contents">
+                            阅读更多 »
+                        </a>
+                    </div>
+                </div>
+            </th:block>
+            <!--文章页文章内容区域-->
+            <th:block th:if="${is_index eq 0}">
+                <div class="post-body animated fadeInDown" itemprop="articleBody">
+                    <th:block th:utext="${post.content.content}"></th:block>
+                </div>
+            </th:block>
+            <!--文章footer-->
+            <footer class="post-footer">
+                <th:block th:if="${is_index eq 1}">
+                    <div class="post-eof"></div>
+                </th:block>
+                <th:block th:if="${is_index eq 0}">
+                    <th:block th:replace="_partials/post/post-copyright"></th:block>
+                    <!--文章导航-->
+                    <!--<div class="post-nav">-->
+                    <!--    <div class="post-nav-item">-->
+                    <!--        <a href="/2020/03/01/next-7-7-2-released/" rel="prev" title="NexT 7.7.2 Released">-->
+                    <!--            <i class="fa fa-angle-left"></i> NexT 7.7.2 Released-->
+                    <!--        </a>-->
+                    <!--    </div>-->
+                    <!--    <div class="post-nav-item">-->
+                    <!--        <a href="/2020/04/01/next-7-8-0-released/" rel="next" title="NexT 7.8.0 Released">-->
+                    <!--            NexT 7.8.0 Released <i class="fa fa-angle-right"></i>-->
+                    <!--        </a>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                </th:block>
+            </footer>
+
+        </article>
+    </div>
+</th:block>

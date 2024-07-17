@@ -1,0 +1,937 @@
+apiVersion: v1alpha1
+kind: Setting
+metadata:
+  name: theme-next-setting
+spec:
+  forms:
+    # 基础设置-----------------------------------------------------------------------------------------
+    - group: basic
+      label: 基础设置
+      formSchema:
+        # 站点信息
+        - $formkit: group
+          name: site
+          label: ""
+          value:
+            type: 0
+            title: "Next"
+            subtitle: "theme for halo 2+"
+          children:
+            - $formkit: select
+              name: type
+              label: 站点信息
+              value: 0
+              options:
+                - label: 使用halo站点信息
+                  value: 1
+                - label: 自定义
+                  value: 0
+            - $formkit: text
+              name: title
+              label: 站点标题
+              help: ""
+              value: ""
+            - $formkit: text
+              name: subtitle
+              label: 二级标题
+              help: ""
+              value: ""
+        # 布局方案
+        - $formkit: select
+          name: scheme
+          label: 布局方案
+          help: "后续将支持更多方案"
+          value: "Pisces"
+          options:
+#            - label: Muse
+#              value: "Muse"
+#            - label: Mist
+#              value: "Mist"
+            - label: Pisces
+              value: "Pisces"
+#            - label: Gemini
+#              value: "Gemini"
+        # 暗黑模式
+        - $formkit: select
+          name: darkmode
+          label: 暗黑模式
+          value: 1
+          options:
+            - label: 开启
+              value: 1
+            - label: 关闭
+              value: 0
+        # 自定义favicon 图标
+        - $formkit: repeater
+          name: favicon
+          label: 自定义favicon
+          help: "自定义favicon开启后不再读取halo的favicon"
+          value: [{"enabled": 0 }]
+          max: 5
+          min: 1
+          addButton: false
+          removeControl: false
+          insertControl: false
+          upControl: false
+          downControl: false
+          children:
+            - $formkit: select
+              name: enabled
+              id: enabled
+              label: 是否启用
+              value: 0
+              options:
+                - label: 启用
+                  value: 1
+                - label: 关闭
+                  value: 0
+            - $formkit: text
+              if: "$value.enabled === 1"
+              name: small
+              label: small
+              help: "small"
+              value: ""
+            - $formkit: text
+              if: "$value.enabled === 1"
+              name: medium
+              label: medium
+              help: "medium"
+              value: ""
+            - $formkit: text
+              if: "$value.enabled === 1"
+              name: apple_touch_icon
+              label: apple_touch_icon
+              help: "apple_touch_icon"
+              value: ""
+            - $formkit: text
+              if: "$value.enabled === 1"
+              name: safari_pinned_tab
+              label: safari_pinned_tab
+              help: "safari_pinned_tab"
+              value: ""
+            - $formkit: text
+              if: "$value.enabled === 1"
+              name: width_expanded
+              label: width_expanded
+              help: "width_expanded"
+              value: ""
+            - $formkit: text
+              if: "$value.enabled === 1"
+              name: android_manifest
+              label: android_manifest
+              help: "android_manifest"
+              value: ""
+        # 徽标设置
+        # see https://theme-next.js.org/docs/theme-settings/index.html?highlight=custom_logo
+        - $formkit: group
+          name: custom_logo
+          label: custom_logo
+          value:
+            enabled: 1
+            custom_enabled: 0
+            url: ''
+          children:
+            - $formkit: select
+              name: enabled
+              label: 是否启用
+              value: 0
+              options:
+                - label: 启用
+                  value: 1
+                - label: 关闭
+                  value: 0
+            - $formkit: select
+              name: custom_enabled
+              id: custom_logo_custom_enabled
+              if: "$value.enabled === 1"
+              label: 是否自定义LOGO地址
+              help: "默认获取halo系统内的站点LOGO"
+              value: 0
+              options:
+                - label: 启用
+                  value: 1
+                - label: 关闭
+                  value: 0
+            - $formkit: text
+              if: "$value.custom_enabled === 1"
+              name: url
+              label: 图片地址
+              help: ""
+              value: ""
+        # 知识共享协议
+        - $formkit: repeater
+          name: creative_commons
+          label: 知识共享协议
+          help: ""
+          value: [{"enabled":1,"license":"by-nc-sa","medium":"small","sidebar":"1","post":"1"}]
+          max: 5
+          min: 1
+          addButton: false
+          removeControl: false
+          insertControl: false
+          upControl: false
+          downControl: false
+          children:
+            - $formkit: select
+              name: enabled
+              id: enabled
+              label: 是否启用
+              value: 1
+              options:
+                - label: 启用
+                  value: 1
+                - label: 关闭
+                  value: 0
+            - $formkit: text
+              if: "$value.enabled === 1"
+              name: license
+              label: license样式
+              help: "small"
+              value: ""
+            - $formkit: text
+              if: "$value.enabled === 1"
+              name: medium
+              label: medium
+              help: "medium"
+              value: ""
+            - $formkit: select
+              if: "$value.enabled === 1"
+              name: sidebar
+              label: 侧边栏是否显示
+              help: ""
+              value: 1
+              options:
+                - label: 显示
+                  value: 1
+                - label: 不显示
+                  value: 0
+            - $formkit: select
+              if: "$value.enabled === 1"
+              name: post
+              label: 文章页面是否显示
+              help: "safari_pinned_tab"
+              value: 1
+              options:
+                - label: 显示
+                  value: 1
+                - label: 不显示
+                  value: 0
+#            - $formkit: text
+#              name: language
+#              label: 语言
+#              help: ""
+#              value: ""
+        # open graph
+#        - $formkit: repeater
+#          name: open_graph
+#          label: open_graph
+#          help: ""
+#          value: [ { "enabled": 1 } ]
+#          max: 5
+#          min: 1
+#          addButton: false
+#          removeControl: false
+#          insertControl: false
+#          upControl: false
+#          downControl: false
+#          children:
+#            - $formkit: select
+#              name: enabled
+#              id: enabled
+#              label: 是否启用
+#              value: 1
+#              options:
+#                - label: 启用
+#                  value: 1
+#                - label: 关闭
+#                  value: 0
+        # 菜单设置
+        - $formkit: group
+          name: menu
+          label: 菜单设置
+          help: "菜单目前不支持设置二级菜单，后续会计划移植原生二级菜单样式"
+          value:
+            enabled: 1
+            icon_enabled: 1
+            type: "custom"
+            halo_menu: "halo"
+            custom_menu: [ { "name": "主页","url": "/","icon": "fa fa-home","target":"_self" },{ "name": "分类","url": "/categories","icon": "fa fa-th","target":"_self" },{ "name": "标签","url": "/tags","icon": "fa fa-tags","target":"_self" },{ "name": "归档","url": "/archives","icon": "fa fa-archive","target":"_self" } ]
+          children:
+            # 开启状态
+            - $formkit: select
+              name: enabled
+              id: menu_enabled
+              label: 是否开启
+              value: 1
+              options:
+                - label: 启用
+                  value: 1
+                - label: 关闭
+                  value: 0
+            - $formkit: select
+              name: icon_enabled
+              id: icon_enabled
+              label: 是否开启菜单项图标
+              value: 1
+              options:
+                - label: 启用
+                  value: 1
+                - label: 关闭
+                  value: 0
+            # 菜单类型
+            - $formkit: select
+              name: type
+              id: menu_type
+              if: $value.enabled === 1
+              label: 菜单类型
+              help: "菜单图标样式参考...，图标样式设置在halo菜单里设置"
+              value: "custom"
+              options:
+                - label: halo内置
+                  value: "halo"
+                - label: 自定义
+                  value: "custom"
+            # halo菜单设置
+            - $formkit: menuRadio
+              name: halo_menu
+              key: halo_menu_key
+              label: 选取halo内置菜单
+              if: $get(menu_type).value == 'halo'
+              value: ""
+            # 自定义菜单设置
+            - $formkit: repeater
+              name: custom_menu
+              label: 自定义菜单
+              key: custom_menu_key
+              if: $get(menu_type).value == 'custom'
+              value: []
+              #          value: [ { "name": "主页","url": "/","icon": "/","target":"_blank" },{ "name": "分类","url": "/categories","icon": "","target":"_blank" },{ "name": "标签","url": "/tags","icon": "","target":"_blank" },{ "name": "归档","url": "/archives","icon": "","target":"_blank" } ]
+              help: ""
+              max: 5
+              min: 1
+              addButton: true
+              removeControl: true
+              insertControl: true
+              upControl: false
+              downControl: false
+              children:
+                - $formkit: text
+                  name: name
+                  label: 名称
+                  value: ""
+                - $formkit: text
+                  name: url
+                  label: 地址
+                  value: ""
+                - $formkit: text
+                  name: icon
+                  label: 图标
+                  help: "图标参考..."
+                  value: ""
+                - $formkit: select
+                  name: target
+                  label: 打开方式
+                  help: "图标参考..."
+                  value: "_self"
+                  options:
+                    - label: _blank
+                      value: "_blank"
+                    - label: _self
+                      value: "_self"
+
+    # 侧栏设置-----------------------------------------------------------------------------------------
+    - group: sidebar
+      label: 侧栏设置
+      formSchema:
+        # 侧栏显隐
+        - $formkit: group
+          name: sidebar
+          id: sidebar_sidebar
+          label: ""
+          value:
+            display: "always"
+            position: "left"
+            advanced: 0
+            width_expanded: "320"
+            width_dual_column: "240"
+            padding: "18"
+            offset: "12"
+          children:
+            - $formkit: select
+              name: display
+              id: sidebar_sidebar_display
+              label: 显示模式
+              value: "always"
+              options:
+                - label: 文章页
+                  value: "post"
+                - label: 总是显示
+                  value: "always"
+                - label: 隐藏
+                  value: "hide"
+                - label: 移除
+                  value: "remove"
+            - $formkit: select
+              name: position
+              if: "$value.display != 'remove'"
+              label: 侧栏位置
+              value: "left"
+              options:
+                - label: 左侧
+                  value: "left"
+                - label: 右侧
+                  value: "right"
+            - $formkit: select
+              name: advanced
+              id: sidebar_sidebar_advanced
+              if: "$value.display != 'remove'"
+              label: 高级设置
+              value: 0
+              options:
+#                - label: 自定义
+#                  value: 1
+                - label: 默认
+                  value: 0
+            - $formkit: text
+              if: "$value.advanced == 1"
+              name: width_expanded
+              label: width_expanded
+              help: "width_expanded"
+              value: "320"
+            - $formkit: text
+              if: "$value.advanced == 1"
+              name: width_dual_column
+              label: width_dual_column
+              help: "width_dual_column"
+              value: "240"
+            - $formkit: text
+              if: "$value.advanced == 1"
+              name: padding
+              label: padding
+              help: "padding"
+              value: "18"
+            - $formkit: text
+              if: "$value.advanced == 1"
+              name: offset
+              label: c
+              help: "offset"
+              value: "12"
+        # 侧脸头像
+        - $formkit: group
+          name: avatar
+          label: 头像设置
+          help: ""
+          value: [ { "url": "", "rounded": 0,"rotated": 0 } ]
+          children:
+            - $formkit: text
+              name: url
+              label: 地址
+              help: ""
+              value: ""
+            - $formkit: select
+              name: rounded
+              label: 圆角
+              help: ""
+              value: 0
+              options:
+                - label: 关闭
+                  value: 0
+                - label: 开启
+                  value: 1
+            - $formkit: select
+              name: rotated
+              label: 悬浮旋转
+              help: ""
+              value: 0
+              options:
+                - label: 开启
+                  value: 1
+                - label: 关闭
+                  value: 0
+        # 用户信息
+        - $formkit: group
+          name: author
+          label: 侧栏用户
+          help: ""
+          value:
+            name: "Next"
+            desc: "Stay Simple. Stay NexT."
+          children:
+            - $formkit: text
+              name: name
+              label: 用户昵称
+              help: ""
+            - $formkit: text
+              name: desc
+              label: 用户描述
+              help: ""
+        # 侧栏是否显示分类标签统计
+        - $formkit: select
+          name: site_state
+          label: 帖子/分类/标签计数栏
+          value: 1
+          options:
+            - label: 显示
+              value: 1
+            - label: 隐藏
+              value: 0
+        # 侧栏社交链接
+        - $formkit: group
+          name: social
+          label: 社交链接栏
+          value: [ ]
+          children:
+            - $formkit: select
+              name: enabled
+              label: 是否开启
+              value: 1
+              options:
+                - label: 开启
+                  value: 1
+                - label: 关闭
+                  value: 0
+            - $formkit: repeater
+              if: "$value.enabled === 1"
+              name: account
+              label: 社交账号
+              value: [ ]
+              max: 5
+              min: 1
+              children:
+                - $formkit: text
+                  name: name
+                  label: 名称
+                  value: ""
+                - $formkit: text
+                  name: url
+                  label: 地址
+                  value: ""
+                - $formkit: text
+                  name: icon
+                  label: 图标
+                  value: ""
+            - $formkit: select
+              if: "$value.enabled === 1"
+              name: transition
+              label: 图标过渡特效
+              value: 1
+              options:
+                - label: 开启
+                  value: 1
+                - label: 关闭
+                  value: 0
+        # 侧栏友链
+        - $formkit: group
+          name: links
+          label: 友链栏
+          value: []
+          children:
+            - $formkit: select
+              name: enabled
+              label: ""
+              value: 1
+              options:
+                - label: 开启
+                  value: 1
+                - label: 关闭
+                  value: 0
+            - $formkit: select
+              if: "$value.enabled === 1"
+              name: layout
+              label: 样式
+              value: "block"
+              options:
+                - label: 块状
+                  value: "block"
+                - label: 内联
+                  value: "inline"
+            - $formkit: repeater
+              if: "$value.enabled === 1"
+              name: social
+              label: 友链添加
+              value: [ ]
+              max: 5
+              min: 1
+              children:
+                - $formkit: text
+                  # 在 Repeater 中进行条件判断的方式，当 enabled 为 true 时才显示
+                  name: name
+                  label: 名称
+                  value: ""
+                - $formkit: text
+                  name: url
+                  label: 地址
+                  value: ""
+                - $formkit: text
+                  name: icon
+                  label: 图标
+                  value: ""
+        # 侧栏目录
+        - $formkit: group
+          name: toc
+          label: 文章目录
+          value:
+            enabled: 1
+            max_depth: 5
+          children:
+            - $formkit: select
+              name: enabled
+              label: ""
+              value: 1
+              options:
+                - label: 开启
+                  value: 1
+                - label: 关闭
+                  value: 0
+#            - $formkit: select
+#              if: "$value.enabled === 1"
+#              name: number
+#              label: 目录序号
+#              value: 1
+#              options:
+#                - label: 显示
+#                  value: 1
+#                - label: 关闭
+#                  value: 0
+            - $formkit: select
+              if: "$value.enabled === 1"
+              name: max_depth
+              label: 最大深度
+              value: 5
+              options:
+#                - label: 1
+#                  value: 1
+#                - label: 2
+#                  value: 2
+#                - label: 3
+#                  value: 3
+#                - label: 4
+#                  value: 4
+                - label: 5
+                  value: 5
+#                - label: 6
+#                  value: 6
+
+    # 页脚设置-----------------------------------------------------------------------------------------
+    - group: footer
+      label: 页脚设置
+      formSchema:
+        # 网站版权信息
+        - $formkit: group
+          name: copyright
+          label: 版权信息
+          value:
+            enabled: 1
+            since: "1900"
+            copyright: "@bit15k"
+            icon:
+              enabled: 1
+              name: "fa fa-heart"
+              animated: 1
+              color: "#ff0000"
+
+          children:
+            - $formkit: select
+              name: enabled
+              label: 是否开启
+              value: 1
+              options:
+                - label: 开启
+                  value: 1
+                - label: 关闭
+                  value: 0
+            - $formkit: text
+              name: copyright
+              label: 版权信息
+              value: "版权信息"
+            # 网站建立时间
+            - $formkit: text
+              name: since
+              label: 网站建立时间
+              value: "1900"
+            - $formkit: group
+              name: icon
+              label: 页脚图标设置
+              children:
+                - $formkit: select
+                  name: enabled
+                  label: 是否开启
+                  value: 1
+                  options:
+                    - label: 开启
+                      value: 1
+                    - label: 关闭
+                      value: 0
+                - $formkit: text
+                  if: "$value.enabled === 1"
+                  name: name
+                  label: 图标样式
+                  value: "fa fa-heart"
+                - $formkit: radio
+                  if: "$value.enabled === 1"
+                  name: animated
+                  label: animated
+                  value: 1
+                  options:
+                    - label: 开启
+                      value: 1
+                    - label: 关闭
+                      value: 0
+                - $formkit: text
+                  if: "$value.enabled === 1"
+                  name: color
+                  label: 颜色
+                  value: "#ff0000"
+        # 备案信息
+        - $formkit: group
+          name: beian
+          label: 备案信息
+          value:
+            enabled: 1
+            icp: "京ICP备 1234567890号-1"
+            gongan_id: "1234567890"
+            gongan_num: "京公网安备 1234567890号"
+          children:
+            - $formkit: radio
+              name: enabled
+              label: 是否开启
+              value: 1
+              options:
+                - label: 开启
+                  value: 1
+                - label: 关闭
+                  value: 0
+            - $formkit: text
+              name: icp
+              if: "$value.enabled === 1"
+              label: ICP备案
+              value: "京ICP备 1234567890号-1"
+            - $formkit: text
+              if: "$value.enabled === 1"
+              name: gongan_id
+              label: 公安备案ID号
+              value: "1234567890"
+            - $formkit: text
+              if: "$value.enabled === 1"
+              name: gongan_num
+              label: 公安备案信息
+              value: "京公网安备 1234567890号"
+#            - $formkit: text
+#              if: "$value.enabled === 1"
+#              name: gongan_icon_url
+#              label: gongan_icon_url
+#              value: "gongan_icon_url"
+
+    # 文章设置-----------------------------------------------------------------------------------------
+    - group: post
+      label: 文章设置
+      formSchema:
+        - $formkit: radio
+          name: excerpt_description
+          label: 主页是否显示文章序言
+          value: 1
+          options:
+            - label: 开启
+              value: 1
+            - label: 关闭
+              value: 0
+        - $formkit: group
+          name: post_meta
+          label: 文章元数据
+          value:
+            enabled: 1
+            created_at: 1
+            updated_at: 1
+            categories: 1
+          children:
+            - $formkit: radio
+              name: enabled
+              label: 是否开启
+              value: 1
+              options:
+                - label: 开启
+                  value: 1
+                - label: 关闭
+                  value: 0
+            - $formkit: radio
+              name: created_at
+              label: 创建时间是否显示
+              value: 1
+              options:
+                - label: 开启
+                  value: 1
+                - label: 关闭
+                  value: 0
+            - $formkit: select
+              name: updated_at
+              label: 更新日期
+              value: 1
+              options:
+                - label: 开启
+                  value: 1
+                - label: 关闭
+                  value: 0
+#            - $formkit: select
+#              name: another_day
+#              label: another_day
+#              value: 1
+#              options:
+#                - label: 开启
+#                  value: 1
+#                - label: 关闭
+#                  value: 0
+            - $formkit: select
+              name: categories
+              label: 分类是否显示
+              value: 1
+              options:
+                - label: 开启
+                  value: 1
+                - label: 关闭
+                  value: 0
+        # 访问量统计
+        - $formkit: group
+          name: visitor
+          label: ''
+          value:
+            enabled: 1
+          children:
+          - $formkit: radio
+            name: enabled
+            label: 访问量显示
+            value: 1
+            options:
+              - label: 开启
+                value: 1
+              - label: 关闭
+                value: 0
+
+    # 其他设置-----------------------------------------------------------------------------------------
+    - group: other
+      label: 其他设置
+      formSchema:
+        # 主题颜色设置
+        - $formkit: group
+          name: theme_color
+          label: 主题颜色
+          value:
+            light: "#222"
+            dark: "#222"
+          children:
+            - $formkit: code
+              name: light
+              label: 正常模式颜色
+              value: "#222"
+              language: yaml
+            - $formkit: code
+              name: dark
+              label: 暗黑模式颜色
+              value: "#222"
+              language: yaml
+        # 预链接
+        - $formkit: radio
+          name: preconnect
+          label: 预链接是否启用
+          value: 0
+          options:
+            - label: 开启
+              value: 1
+            - label: 关闭
+              value: 0
+
+    # 第三方插件
+    - group: third
+      label: 第三方插件
+      formSchema:
+        # 搜索插件
+        - $formkit: group
+          name: search
+          label: 搜索插件
+          help: "默认启用halo官方搜索插件，未安装不生效，后续会适配其他搜索插件"
+          value:
+            enabled: 1
+            type: "halo"
+          children:
+            - $formkit: select
+              name: enabled
+              label: 是否开启
+              value: 1
+              help: ""
+              options:
+                - label: 开启
+                  value: 1
+                - label: 关闭
+                  value: 0
+            - $formkit: select
+              if: "$value.enabled === 1"
+              name: type
+              label: 搜索插件类型
+              value: "halo"
+              help: ""
+              options:
+                - label: halo官方搜索插件
+                  value: "halo"
+
+        # motion animate_css 动画
+        - $formkit: group
+          name: motion
+          label: animate.css
+          value:
+            enabled: 0
+          children:
+            - $formkit: select
+              name: enabled
+              label: 是否开启
+              value: 0
+              help: ""
+              options:
+                - label: 开启
+                  value: 1
+                - label: 关闭
+                  value: 0
+        # fancybox_css 灯箱脚本
+        - $formkit: group
+          name: fancybox_css
+          label: fancybox.css
+          value:
+            enabled: 0
+          children:
+            - $formkit: select
+              name: enabled
+              label: 是否开启
+              value: 0
+              help: ""
+              options:
+                - label: 开启
+                  value: 1
+                - label: 关闭
+                  value: 0
+        # pace.js
+        - $formkit: group
+          name: pace
+          label: pace.js
+          value:
+            enabled: 0
+          children:
+            - $formkit: select
+              name: enabled
+              label: 是否开启
+              value: 0
+              help: ""
+              options:
+                - label: 开启
+                  value: 1
+                - label: 关闭
+                  value: 0
+            - $formkit: code
+              name: color
+              label: color
+              value: "blue"
+              language: css
+            - $formkit: code
+              name: theme
+              label: theme
+              value: "minimal"
+              language: css
+
+

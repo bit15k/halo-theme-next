@@ -1,0 +1,40 @@
+<!--头像区域-->
+<div class="site-author animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="" th:src="${site.logo}">
+    <p class="site-author-name" itemprop="name" th:text="${theme.config.sidebar.author.name}">bit15k</p>
+    <div class="site-description" itemprop="description" th:text="${theme.config.sidebar.author.desc}">作者描述</div>
+</div>
+<!--统计栏-->
+<div class="site-state-wrap animated" th:if="${theme.config.sidebar.site_state eq 1}">
+    <nav class="site-state" th:with="stats = ${siteStatsFinder.getStats()}">
+        <div class="site-state-item site-state-posts">
+            <a href="/archives">
+                <span class="site-state-item-count" th:text="${stats.post}">85</span>
+                <span class="site-state-item-name">文章</span>
+            </a>
+        </div>
+        <div class="site-state-item site-state-categories">
+            <a href="/categories">
+                <span class="site-state-item-count" th:text="${stats.category}">2</span>
+                <span class="site-state-item-name">分类</span></a>
+        </div>
+        <div class="site-state-item site-state-tags">
+            <a href="/tags" th:with="tags = ${tagFinder.listAll()}">
+                <span class="site-state-item-count" th:text="${#lists.size(tags)}">2</span>
+                <span class="site-state-item-name">标签</span></a>
+        </div>
+    </nav>
+</div>
+<!--社交信息栏目-->
+<!--<div class="links-of-author animated">-->
+<!--                      <span class="links-of-author-item">-->
+<!--                        <a href="https://github.com/yourname" title="GitHub → https://github.com/yourname"-->
+<!--                           rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>-->
+<!--                      </span>-->
+<!--</div>-->
+<!--版权许可信息    -->
+<div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img
+            src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg"
+            alt="Creative Commons"></a>
+</div>

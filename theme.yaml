@@ -1,0 +1,21 @@
+apiVersion: theme.halo.run/v1alpha1
+kind: Theme
+metadata:
+  name: theme-next
+spec:
+  displayName: Next for Halo 2+
+  author:
+    name: bit15k
+    website: "https://www.logdict.com"
+  description: Next for Halo 2+
+  logo: "https://www.halo.run/logo"
+  homepage: "https://github.com/bit15k/halo-theme-next"
+  repo: "https://github.com/bit15k/halo-theme-next"
+  issues: "https://github.com/bit15k/halo-theme-next/issues"
+  settingName: "theme-next-setting"
+  configMapName: "theme-next-configMap"
+  version: "1.0.0"
+  requires: ">=2.0.0"
+  license:
+    - name: "GPL-3.0"
+      url: "https://github.com/bit15k/halo-theme-next/blob/main/LICENSE"

@@ -1,0 +1,11 @@
+<div class="comments animated fadeIn" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments </noscript>
+    <!-- 需要判断当前评论组件是否满足显示的条件，这个变量可能是是否安装评论插件、文章是否开启评论等条件的组合 -->
+    <div th:if="${haloCommentEnabled}">
+        <halo:comment
+                group="content.halo.run"
+                kind="Post"
+                th:attr="name=${post.metadata.name}"
+        />
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{_layout :: html(head = null,content = ~{::content}, sidebar = ~{::sidebar}, have_comment = 0, class = 'page posts-expand', is_home = 1, is_archive = 0)}"
+>
+    <!--分类集合-->
+    <th:block th:fragment="content">
+        <div class="post-block animated fadeIn" lang="en">
+            <header class="post-header animated fadeInDown">
+                <h1 class="post-title" itemprop="name headline">标签
+                </h1>
+
+                <div class="post-meta-container">
+                </div>
+
+            </header>
+
+
+            <div class="post-body animated fadeInDown">
+                <div class="tag-cloud">
+                    <div class="tag-cloud-title">
+                        <span th:text="${#lists.size(tags)}"></span> 条标签
+                    </div>
+                    <div class="tag-cloud-tags">
+                        <a th:each="tag : ${tags}" th:text="${tag.spec.displayName}" th:href="${tag.status.permalink}"
+                           style="font-size: 12px;" class="tag-cloud-0">Another Tag</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </th:block>
+    <th:block th:fragment="sidebar" th:replace="~{_macro/sidebar::render(display_toc=0)}"></th:block>
+
+</html>

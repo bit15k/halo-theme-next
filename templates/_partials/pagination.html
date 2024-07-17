@@ -1,0 +1,15 @@
+<nav class="pagination animated fadeIn">
+
+        <a class="extend prev" rel="prev" title="Previous page" aria-label="Previous page" th:if="${posts.page} ne 1" th:href="${posts.prevUrl}">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        <a class="page-number" th:if="${posts.page gt 3}">...</a>
+        <a class="page-number" th:if="${posts.hasPrevious}" th:text="${posts.page}-1" th:href="'/page/'+${posts.page-1}"></a>
+        <span class="page-number current" th:text="${posts.page}">1</span>
+        <a class="page-number" th:if="${posts.page gt 3 and posts.page ne posts.totalPages}">...</a>
+        <a class="page-number" th:if="${posts.hasNext}" th:text="${posts.page}+1" th:href="'/page/'+${posts.page+1}"></a>
+
+        <a class="extend next" rel="next" title="Next page" aria-label="Next page" th:if="${posts.page ne posts.totalPages}" th:href="${posts.nextUrl}">
+            <i class="fa fa-angle-right"></i>
+        </a>
+</nav>

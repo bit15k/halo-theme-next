@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" th:replace="~{_layout :: html(head = null,content = ~{::content}, sidebar = ~{::sidebar}, class = 'index posts-expand', is_home = 1, is_archive = 0, have_comment = 0)}">
+    <!--首页文章列表-->
+    <th:block th:fragment="content">
+        <th:block th:each="post : ${posts.items}">
+            <th:block th:replace="~{_macro/post :: post(post = ${post},is_index = 1)}"></th:block>
+        </th:block>
+        <!--翻页 hud-->
+        <th:block th:replace="_partials/pagination"></th:block>
+    </th:block>
+    <!--主页用户头像 文章目录侧栏-->
+    <th:block th:fragment="sidebar" th:replace="~{_macro/sidebar::render(display_toc=null)}"></th:block>
+
+</html>
+
+
+

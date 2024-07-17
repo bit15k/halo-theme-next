@@ -1,0 +1,53 @@
+<!--侧边栏头像和文章目录站点等信息区域-->
+<th:block xmlns:th="https://www.thymeleaf.org" th:fragment="render(display_toc)">
+    <aside class="sidebar">
+        <!--侧边栏头像和文章目录站点信息区域-->
+        <div th:class="${display_toc eq 1}?'sidebar-inner sidebar-nav-active sidebar-toc-active animated fadeInUp':'sidebar-inner sidebar-overview-active animated fadeInUp'">
+            <!--作者信息或目录信息-->
+            <ul class="sidebar-nav">
+                <li class="sidebar-nav-toc">
+                    目录
+                </li>
+                <li class="sidebar-nav-overview">
+                    站点
+                </li>
+            </ul>
+            <!--文章目录和站点概览-->
+            <div class="sidebar-panel-container">
+                <!--目录-->
+                <!--noindex-->
+                <div class="post-toc-wrap sidebar-panel">
+                    <div class="post-toc animated"></div>
+                </div>
+                <!--/noindex-->
+                <!--站点概览-->
+                <div class="site-overview-wrap sidebar-panel">
+                    <th:block th:replace="_partials/sidebar/site-overview.html"></th:block>
+                </div>
+            </div>
+            <!--返回顶部-->
+            <div class="back-to-top animated" role="button" aria-label="Back to top">
+                <i class="fa fa-arrow-up"></i>
+                <span>0%</span>
+            </div>
+        </div>
+        <!--友情链接部分 hud-->
+        <!--<div class="sidebar-inner sidebar-blogroll animated fadeInUp">-->
+        <!--    <div class="links-of-blogroll animated">-->
+        <!--        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>-->
+        <!--            Links-->
+        <!--        </div>-->
+        <!--        <ul class="links-of-blogroll-list">-->
+        <!--            <li class="links-of-blogroll-item">-->
+        <!--                <a href="https://example.com/" title="https://example.com">Title</a>-->
+        <!--            </li>-->
+        <!--        </ul>-->
+        <!--    </div>-->
+        <!--</div>-->
+        <!--相关文章部分 hud    -->
+
+    </aside>
+
+
+</th:block>
+

@@ -1,0 +1,48 @@
+<th:block th:if="${theme.config.basic.menu.type eq 'halo'}" th:with="selcetMenua=${theme.config.basic.menu.halo_menu}">
+    <th:block th:with="menu = ${menuFinder.getByName(selcetMenua)}">
+        <th:block th:with="menuItems = ${menu.menuItems}">
+            <th:block th:each="menuItem : ${menuItems}">
+                <li class="menu-item menu-item-home animated fadeInDown">
+                    <a th:href="@{${menuItem.status.href}}" th:target="${menuItem.spec.target?.value}" rel="section" class="" >
+                        <!--菜单项样式-->
+                        <th:block th:if="${theme.config.basic.menu.icon_enabled eq 1}">
+                            <i th:if="${menuItem.metadata.annotations.get('icon_class') ne ''}" th:class="${menuItem.metadata.annotations.get('icon_class')}+' fa-fw'"></i>
+                        </th:block>
+                        <span th:text="${menuItem.status.displayName}"></span>
+                    </a>
+                </li>
+            </th:block>
+        </th:block>
+    </th:block>
+</th:block>
+<th:block th:if="${theme.config.basic.menu.type eq 'custom'}">
+            <th:block th:each="menuItem : ${theme.config.basic.menu.custom_menu}">
+                <li class="menu-item menu-item-home animated fadeInDown">
+                    <a th:href="@{${menuItem.url}}"  rel="section" class="" th:target="${menuItem.target}">
+                        <!--菜单项样式-->
+                        <th:block th:if="${theme.config.basic.menu.icon_enabled eq 1}">
+                            <i th:if="${menuItem.icon ne ''}" th:class="${menuItem.icon}+' fa-fw'"></i>
+                        </th:block>
+                        <th:block th:text="${menuItem.name}"></th:block>
+                    </a>
+                </li>
+            </th:block>
+</th:block>
+
+<!--搜索-->
+<th:block th:if="${theme.config.basic.menu.enabled eq 1}">
+    <th:block th:if="${theme.config.third.search.enabled eq 1}">
+    <!--halo官方搜索插件-->
+    <li class="menu-item menu-item-search animated fadeInDown" th:if="${pluginFinder.available('PluginSearchWidget') and theme.config.third.search.type eq 'halo'}">
+        <a role="button" class="popup-trigger" href="javascript:SearchWidget.open()">
+            <th:block th:if="${theme.config.basic.menu.icon_enabled eq 1}">
+                <i class="fa fa-search fa-fw"></i>
+             </th:block>
+            <span>搜索</span>
+        </a>
+
+    </li>
+    </th:block>
+</th:block>
+
+

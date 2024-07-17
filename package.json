@@ -1,0 +1,15 @@
+{
+  "name": "theme-void",
+  "version": "1.0.0",
+  "description": "Halo 2.0 的基础主题开发模板，包含了主题的基本目录结构。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hexo-renderer-stylus": "^3.0.1",
+    "hexo-theme-next": "^8.20.0"
+  }
+}

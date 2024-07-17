@@ -1,0 +1,48 @@
+<th:block th:fragment="post-meta(post)">
+<div class="post-meta">
+    <!--发布时间-->
+    <span th:if="${theme.config.post.post_meta.enabled eq 1 and theme.config.post.post_meta.created_at eq 1 }" class="post-meta-item">
+        <span class="post-meta-item-icon">
+            <i class="far fa-calendar"></i>
+        </span>
+        <span class="post-meta-item-text">发表于: </span>
+        <time th:datetime="${post.spec.publishTime}" th:text="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}" itemprop="dateCreated datePublished"
+              title="Created: 2024-07-08 09:55:04"></time>
+    </span>
+    <!--更新时间-->
+    <span th:if="${theme.config.post.post_meta.enabled eq 1 and theme.config.post.post_meta.updated_at eq 1}" class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于: </span>
+      <time th:text="${#dates.format(post.status.lastModifyTime, 'yyyy-MM-dd')}" title="更新于: " itemprop="dateModified" th:datetime="${#dates.format(post.status.lastModifyTime, 'yyyy-MM-dd')}">2024-07-07</time>
+    </span>
+    <!--访问量统计 -->
+    <span th:if="${theme.config.post.visitor.enabled}" id="" class="post-meta-item leancloud_visitors" data-flag-title="" title="Views">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">浏览: </span>
+      <span class="leancloud-visitors-count" th:text="${post.stats.visit}"></span>
+    </span>
+    <!--分类-->
+    <th:block th:if="${#lists.size(post.categories) ne 0 and theme.config.post.post_meta.enabled eq 1 and theme.config.post.post_meta.categories eq 1}">
+        <span class="post-meta-item">
+            <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+            </span>
+            <span class="post-meta-item-text">I</span>
+            <th:block th:each="category:${post.categories}">
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Sports/" itemprop="url" rel="index"><span itemprop="name" th:text="${category.spec.displayName}">Sports</span></a>
+                </span>
+            </th:block>
+        </span>
+    </th:block>
+    <span class="post-meta-break"></span>
+    <!--hud 字数统计    -->
+    <!--hud 阅读时间统计    -->
+
+</div>
+
+</th:block>

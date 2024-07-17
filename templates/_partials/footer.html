@@ -1,0 +1,35 @@
+<!--备案信息 hud-->
+<div class="beian" th:if="${theme.config.footer.beian.enabled eq 1}">
+    <a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank" th:text="${theme.config.footer.beian.icp}">京ICP备 1234567890号-1 </a>
+    <img src="/uploads/beian.png" alt="">
+    <a th:href="'https://beian.mps.gov.cn/#/query/webSearch?code='+${theme.config.footer.beian.gongan_nid}" rel="noopener" target="_blank" th:text="${theme.config.footer.beian.gongan_num}">京公网安备 1234567890号 </a>
+</div>
+<!--版权信息 hud-->
+<div class="copyright" th:if="${theme.config.footer.copyright.enabled eq 1}">
+    © <span th:text="${theme.config.footer.copyright.since}">2021</span> –
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love" th:if="${theme.config.footer.copyright.icon.enabled eq 1}">
+      <i th:class="${theme.config.footer.copyright.icon.name}"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder" th:text="${theme.config.footer.copyright.copyright}">版权信息</span>
+</div>
+<!--字数统计 hud-->
+<!--<div class="wordcount">-->
+<!--  <span class="post-meta-item">-->
+<!--    <span class="post-meta-item-icon">-->
+<!--      <i class="fa fa-chart-line"></i>-->
+<!--    </span>-->
+<!--    <span title="Word count total">16k</span>-->
+<!--  </span>-->
+<!--    <span class="post-meta-item">-->
+<!--    <span class="post-meta-item-icon">-->
+<!--      <i class="fa fa-coffee"></i>-->
+<!--    </span>-->
+<!--    <span title="Reading time total">58 mins.</span>-->
+<!--  </span>-->
+<!--</div>-->
+<!--hud power by -->
+<div class="powered-by">Powered by <a href="https://www.halo.run/" rel="noopener" target="_blank">Halo</a> theme <a href="https://www.logdict.com/" rel="noopener" target="_blank" th:title="'Next for halo 2+ Ver.'+${theme.spec.version}">Next</a>
+</div>
+
+
