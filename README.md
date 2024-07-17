@@ -7,7 +7,7 @@
 <h1 align="center">Next for Halo 2+</h1>
 <p align="center">
 
-[主题预览](#主题预览图) | [快速上手](https://www.logdict.com/archives/AirCloud#%E4%B8%BB%E9%A2%98%E4%B8%8B%E8%BD%BD) | [使用文档](https://www.logdict.com/archives/AirCloud)
+[主题预览](#主题预览图) | [快速上手](https://www.logdict.com/archives/AirCloud#%E4%B8%BB%E9%A2%98%E4%B8%8B%E8%BD%BD) | [使用文档](https://github.com/halo-dev/halo-theme-next?tab=readme-ov-file#%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95) | [参与开发](https://github.com/halo-dev/halo-theme-next?tab=readme-ov-file#%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95)
 
 </p>
 <p align="center"> 
@@ -20,8 +20,19 @@
 <a href="https://www.logdict.com/archives/AirCloud" target="_blank">
 <img width="100%" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/next-schemes.png"/></a>
 </p>
+<p align="center">
 
+[主题预览](#主题预览图) | [快速上手](https://www.logdict.com/archives/AirCloud#%E4%B8%BB%E9%A2%98%E4%B8%8B%E8%BD%BD) | [使用文档](https://github.com/halo-dev/halo-theme-next?tab=readme-ov-file#%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95) | [联系交流](##问题联系) | [参与开发](https://github.com/halo-dev/halo-theme-next?tab=readme-ov-file#%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95)
+
+</p>
 </div>
+
+## 主题预览
+
+| 站点名称    | 站点地址                     |
+|---------|--------------------------|
+| LogDict | https://www.logdict.com/ |
+
 
 ## 主题介绍
 
@@ -66,6 +77,11 @@
 扫描或点击二维码加入交流群   
 <a href="https://qm.qq.com/q/z45cKGUz6w" target="_blank"><img width="30%" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/contact-qq.jpg"/></a>
 
+
+## 相关文档
+
+- [关注项目主页更新](https://github.com/halo-dev/halo-theme-next?tab=readme-ov-file#%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95)
+
 ## 参与贡献
 
 如果你想帮助完善 Next 主题，请：
@@ -74,9 +90,4 @@
 - 提 issue
 - 修 bugs
 - 推 pr
- 
-## 相关文档
-
-关注[项目主页](https://github.com/halo-dev/halo-theme-next?tab=readme-ov-file#%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95)
-
 
