@@ -4,10 +4,13 @@
         <li class="post-copyright-author">
             <strong>作者:  </strong><span th:text="${post.owner.name}"></span>
         </li>
+        <!---->
+        <th:block th:if="${post.status.permalink ne null}">
         <li class="post-copyright-link">
             <strong>文章链接: </strong>
             <a th:href="${post.status.permalink}" th:text="${site.url + #strings.substring(post.status.permalink,1)}" title="Welcome to the NexT Organization!">http://example.com/2020/03/01/hexo-theme-next/</a>
         </li>
+        </th:block>
         <li class="post-copyright-license">
             <strong>版权所有:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
         </li>

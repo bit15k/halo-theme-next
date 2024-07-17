@@ -1,10 +1,22 @@
+<!--<!DOCTYPE html>-->
+<!--<html-->
+<!--  xmlns:th="https://www.thymeleaf.org"-->
+<!--  th:replace="~{layout2 :: html(head = null,content = ~{::content})}"-->
+<!--&gt;-->
+<!--  <th:block th:fragment="content">-->
+<!--    <h1 th:text="${singlePage.spec.title}"></h1>-->
+<!--    <article th:utext="${singlePage.content.content}"></article>-->
+<!--  </th:block>-->
+<!--</html>-->
 <!DOCTYPE html>
-<html
-  xmlns:th="https://www.thymeleaf.org"
-  th:replace="~{layout2 :: html(head = null,content = ~{::content})}"
+<html xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{_layout :: html(head = null,content = ~{::content}, sidebar = ~{::sidebar}, have_comment = 1, class = 'index posts-expand', is_home = 1,is_archive = 0)}"
 >
+  <!--文章-->
   <th:block th:fragment="content">
-    <h1 th:text="${singlePage.spec.title}"></h1>
-    <article th:utext="${singlePage.content.content}"></article>
+    <!--文章区-->
+    <th:block th:replace="~{_macro/post :: post(post = ${singlePage}, is_index = 0, is_page = 1)}"></th:block>
   </th:block>
+  <th:block th:fragment="sidebar" th:replace="~{_macro/sidebar::render(display_toc=1)}"></th:block>
+
 </html>

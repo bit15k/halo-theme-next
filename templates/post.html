@@ -5,7 +5,7 @@
   <!--文章-->
   <th:block th:fragment="content">
     <!--文章区-->
-    <th:block th:replace="~{_macro/post :: post(post = ${post},is_index = 0)}"></th:block>
+    <th:block th:replace="~{_macro/post :: post(post = ${post},is_index = 0, is_page = 1)}"></th:block>
   </th:block>
   <th:block th:fragment="sidebar" th:replace="~{_macro/sidebar::render(display_toc=1)}"></th:block>
 

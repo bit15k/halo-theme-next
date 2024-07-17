@@ -14,7 +14,7 @@ spec:
   issues: "https://github.com/bit15k/halo-theme-next/issues"
   settingName: "theme-next-setting"
   configMapName: "theme-next-configMap"
-  version: "1.0.0"
+  version: "1.0.0-beta.1"
   requires: ">=2.0.0"
   license:
     - name: "GPL-3.0"

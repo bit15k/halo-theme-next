@@ -1,12 +1,14 @@
 <meta charset="utf-8">
 <!--darkmode & color_dark & color_light-->
-<th:block th:if="${theme.config.basic.darkmode eq 1}">
-    <meta name="theme-color"  th:content="${theme.config.other.theme_color.light}" media="(prefers-color-scheme: light)">
-    <meta name="theme-color"  th:content="${theme.config.other.theme_color.dark}" media="(prefers-color-scheme: dark)">
-</th:block>
-<th:block th:if="${theme.config.basic.darkmode eq 0}">
-    <meta name="theme-color"  th:content="${theme.config.other.theme_color.dark}">
-</th:block>
+<!--<th:block th:if="${theme.config.basic.darkmode eq 1}">-->
+<!--    <meta name="theme-color"  th:content="${theme.config.other.theme_color.light}" media="(prefers-color-scheme: light)">-->
+<!--    <meta name="theme-color"  th:content="${theme.config.other.theme_color.dark}" media="(prefers-color-scheme: dark)">-->
+<!--</th:block>-->
+<!--<th:block th:if="${theme.config.basic.darkmode eq 0}">-->
+<!--    <meta name="theme-color"  th:content="${theme.config.other.theme_color.light}">-->
+<!--</th:block>-->
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
 <!--hud config.meta_generator-->
 
 <!--hud preconnect-->

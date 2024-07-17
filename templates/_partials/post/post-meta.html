@@ -26,6 +26,7 @@
       <span class="leancloud-visitors-count" th:text="${post.stats.visit}"></span>
     </span>
     <!--分类-->
+    <th:block th:if="${is_page ne 1 }">
     <th:block th:if="${#lists.size(post.categories) ne 0 and theme.config.post.post_meta.enabled eq 1 and theme.config.post.post_meta.categories eq 1}">
         <span class="post-meta-item">
             <span class="post-meta-item-icon">
@@ -38,6 +39,7 @@
                 </span>
             </th:block>
         </span>
+    </th:block>
     </th:block>
     <span class="post-meta-break"></span>
     <!--hud 字数统计    -->

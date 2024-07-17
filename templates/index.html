@@ -3,7 +3,7 @@
     <!--首页文章列表-->
     <th:block th:fragment="content">
         <th:block th:each="post : ${posts.items}">
-            <th:block th:replace="~{_macro/post :: post(post = ${post},is_index = 1)}"></th:block>
+            <th:block th:replace="~{_macro/post :: post(post = ${post},is_index = 1,is_page = 0)}"></th:block>
         </th:block>
         <!--翻页 hud-->
         <th:block th:replace="_partials/pagination"></th:block>
