@@ -1,23 +1,23 @@
 
 <div align="center">
-<a href="https://www.logdict.com/archives/AirCloud" target="_blank">
+<a href="https://github.com/bit15k/halo-theme-next" target="_blank">
 <img width="100px" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/logo.svg">
 </a>
 
 <h1 align="center">Next for Halo 2+</h1>
 <p align="center">
 
-[主题预览](#主题预览图) | [快速上手](https://www.logdict.com/archives/AirCloud#%E4%B8%BB%E9%A2%98%E4%B8%8B%E8%BD%BD) | [使用文档](https://github.com/halo-dev/halo-theme-next?tab=readme-ov-file#%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95) | [参与开发](https://github.com/halo-dev/halo-theme-next?tab=readme-ov-file#%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95)
+[主题预览](#主题预览图) | [快速上手](#快速安装) | [使用文档](#相关文档) | [联系交流](#问题联系) | [参与开发](#相关文档)
 
 </p>
 <p align="center"> 
 <a href="https://halo.run" target="_blank"><img alt="Dynamic YAML Badge" src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbit15k%2Fhalo-theme-next%2Fmain%2Ftheme.yaml&query=%24.spec.requires&label=Halo&color=blue"></a>
-<a href="https://www.logdict.com/archives/AirCloud" target="_blank"><img alt="Dynamic YAML Badge" src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbit15k%2Fhalo-theme-next%2Fmain%2Ftheme.yaml&query=%24.spec.version&label=Release&color=red"></a>
-<a href="https://www.logdict.com/archives/AirCloud" target="_blank"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/bit15k/halo-theme-next?label=Last%20Commit"></a>
+<a href="https://github.com/bit15k/halo-theme-next" target="_blank"><img alt="Dynamic YAML Badge" src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbit15k%2Fhalo-theme-next%2Fmain%2Ftheme.yaml&query=%24.spec.version&label=Release&color=red"></a>
+<a href="https://github.com/bit15k/halo-theme-next" target="_blank"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/bit15k/halo-theme-next?label=Last%20Commit"></a>
 <a href="https://raw.githubusercontent.com/bit15k/halo-theme-next/main/LICENSE" target="_blank"><img alt="Dynamic YAML Badge" src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbit15k%2Fhalo-theme-next%2Fmain%2Ftheme.yaml&query=%24.spec.license%5B%3A1%5D.name&label=License"></a>
 </p>
 <p align="center">
-<a href="https://www.logdict.com/archives/AirCloud" target="_blank">
+<a href="https://github.com/bit15k/halo-theme-next" target="_blank">
 <img width="100%" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/next-schemes.png"/></a>
 </p>
 <p align="center">
@@ -51,7 +51,7 @@
 
 ### 应用市场安装
 
-- [Halo 应用市场](https://www.halo.run/store/apps/app-ZUaYf) 直接搜索主题名称下载安装
+- [Halo 应用市场](https://www.halo.run/store/) 直接搜索主题名称下载安装
 
 
 ### 本地安装
@@ -86,8 +86,8 @@
 
 如果你想帮助完善 Next 主题，请：
 
-- 点 star
-- 提 issue
-- 修 bugs
-- 推 pr
+- 点 [star](https://github.com/bit15k/halo-theme-next)
+- 提 [issue](https://github.com/bit15k/halo-theme-next/issues)
+- 修 [bugs](https://github.com/bit15k/halo-theme-next)
+- 推 [pr](https://github.com/bit15k/halo-theme-next)
 
