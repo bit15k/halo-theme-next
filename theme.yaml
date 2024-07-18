@@ -2,6 +2,9 @@ apiVersion: theme.halo.run/v1alpha1
 kind: Theme
 metadata:
   name: theme-next
+  annotations:
+    # Add supports for Halo App Store
+    "store.halo.run/app-id": "app-XNaQC"
 spec:
   displayName: Next for Halo 2+
   author:
