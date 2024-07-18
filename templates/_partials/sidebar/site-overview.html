@@ -32,9 +32,44 @@
 <!--                           rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>-->
 <!--                      </span>-->
 <!--</div>-->
-<!--版权许可信息    -->
-<div class="cc-license animated" itemprop="license">
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img
-            src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg"
-            alt="Creative Commons"></a>
-</div>
+<!--版权许可信息-->
+<th:block th:if="${theme.config.basic.creative_commons.enabled eq 1 and theme.config.basic.creative_commons.sidebar eq 1}">
+    <div class="cc-license animated" itemprop="license" th:switch="${theme.config.basic.creative_commons.license}">
+        <th:block th:case="by">
+            <a href="https://creativecommons.org/licenses/by/4.0/" class="cc-opacity" rel="noopener" target="_blank">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by.svg" alt="Creative Commons">
+            </a>
+        </th:block>
+        <th:block th:case="by-nc">
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/" class="cc-opacity" rel="noopener" target="_blank">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc.svg" alt="Creative Commons">
+            </a>
+        </th:block>
+        <th:block th:case="by-nc-nd">
+            <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="cc-opacity" rel="noopener" target="_blank">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_nd.svg" alt="Creative Commons">
+            </a>
+        </th:block>
+        <th:block th:case="by-nc-sa">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons">
+            </a>
+        </th:block>
+        <th:block th:case="by-nd">
+            <a href="https://creativecommons.org/licenses/by-nd/4.0/" class="cc-opacity" rel="noopener" target="_blank">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nd.svg" alt="Creative Commons">
+            </a>
+        </th:block>
+        <th:block th:case="by-sa">
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_sa.svg" alt="Creative Commons">
+            </a>
+        </th:block>
+        <th:block th:case="cc-zero">
+            <a href="https://creativecommons.org/licenses/zero/1.0/" class="cc-opacity" rel="noopener" target="_blank">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/cc_zero.svg" alt="Creative Commons">
+            </a>
+        </th:block>
+
+    </div>
+</th:block>

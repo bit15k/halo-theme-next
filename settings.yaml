@@ -184,11 +184,15 @@ spec:
               if: "$value.enabled === 1"
               name: license
               label: license 样式
-            - $formkit: text
+            - $formkit: select
               if: "$value.enabled === 1"
               name: size
-              label: 大小
-              help: "medium"
+              label: 图标大小
+              options:
+                - label: 较小
+                  value: "small"
+                - label: 较大
+                  value: "big"
             - $formkit: select
               if: "$value.enabled === 1"
               name: sidebar
