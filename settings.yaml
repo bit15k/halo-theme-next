@@ -160,68 +160,54 @@ spec:
               help: ""
               value: ""
         # 知识共享协议
-#        - $formkit: repeater
-#          name: creative_commons
-#          label: 知识共享协议
-#          help: ""
-#          value: [{"enabled":1,"license":"by-nc-sa","medium":"small","sidebar":"1","post":"1"}]
-#          max: 5
-#          min: 1
-#          addButton: false
-#          removeControl: false
-#          insertControl: false
-#          upControl: false
-#          downControl: false
-#          children:
-#            - $formkit: select
-#              name: enabled
-#              id: enabled
-#              label: 是否启用
-#              value: 1
-#              options:
-#                - label: 启用
-#                  value: 1
-#                - label: 关闭
-#                  value: 0
-#            - $formkit: text
-#              if: "$value.enabled === 1"
-#              name: license
-#              label: license样式
-#              help: "small"
-#              value: ""
-#            - $formkit: text
-#              if: "$value.enabled === 1"
-#              name: medium
-#              label: medium
-#              help: "medium"
-#              value: ""
-#            - $formkit: select
-#              if: "$value.enabled === 1"
-#              name: sidebar
-#              label: 侧边栏是否显示
-#              help: ""
-#              value: 1
-#              options:
-#                - label: 显示
-#                  value: 1
-#                - label: 不显示
-#                  value: 0
-#            - $formkit: select
-#              if: "$value.enabled === 1"
-#              name: post
-#              label: 文章页面是否显示
-#              help: "safari_pinned_tab"
-#              value: 1
-#              options:
-#                - label: 显示
-#                  value: 1
-#                - label: 不显示
-#                  value: 0
-#            - $formkit: text
-#              name: language
-#              label: 语言
-#              help: ""
-#              value: ""
+        - $formkit: group
+          name: creative_commons
+          label: 知识共享协议
+          value:
+            enabled: 1
+            license: "by-nc-sa"
+            size: "small"
+            sidebar: 1
+            post: 1
+          children:
+            - $formkit: select
+              name: enabled
+              id: enabled
+              label: 是否启用
+              value: 1
+              options:
+                - label: 启用
+                  value: 1
+                - label: 关闭
+                  value: 0
+            - $formkit: text
+              if: "$value.enabled === 1"
+              name: license
+              label: license 样式
+            - $formkit: text
+              if: "$value.enabled === 1"
+              name: size
+              label: 大小
+              help: "medium"
+            - $formkit: select
+              if: "$value.enabled === 1"
+              name: sidebar
+              label: 侧边栏是否显示
+              help: ""
+              options:
+                - label: 显示
+                  value: 1
+                - label: 不显示
+                  value: 0
+            - $formkit: select
+              if: "$value.enabled === 1"
+              name: post
+              label: 文章页面是否显示
+              options:
+                - label: 显示
+                  value: 1
+                - label: 不显示
+                  value: 0
         # open graph
 #        - $formkit: repeater
 #          name: open_graph

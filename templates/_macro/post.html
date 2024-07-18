@@ -79,7 +79,10 @@
                     <div class="post-eof"></div>
                 </th:block>
                 <th:block th:if="${is_index eq 0}">
-                    <th:block th:replace="_partials/post/post-copyright"></th:block>
+                    <!--版权信息-->
+                    <th:block th:if="${theme.config.basic.creative_commons.enabled eq 1 and theme.config.basic.creative_commons.sidebar eq 1}">
+                        <th:block th:replace="_partials/post/post-copyright"></th:block>
+                    </th:block>
                     <!--文章导航-->
                     <!--<div class="post-nav">-->
                     <!--    <div class="post-nav-item">-->

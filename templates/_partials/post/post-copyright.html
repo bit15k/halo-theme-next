@@ -8,11 +8,17 @@
         <th:block th:if="${post.status.permalink ne null}">
         <li class="post-copyright-link">
             <strong>文章链接：</strong>
-            <a th:href="${post.status.permalink}" th:text="${site.url + post.status.permalink}" title="Welcome to the NexT Organization!">http://example.com/2020/03/01/hexo-theme-next/</a>
+            <a th:href="${post.status.permalink}" th:text="${site.url + post.status.permalink}" title="Welcome to the NexT Organization!">网址</a>
         </li>
         </th:block>
-        <li class="post-copyright-license">
-            <strong>版权所有：</strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 协议授权。
+        <li class="post-copyright-license" th:switch="${theme.config.basic.creative_commons.license}">
+            <th:block th:case="by"><strong>版权所有：</strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i><span th:text="${#strings.toUpperCase(theme.config.basic.creative_commons.license)}"></span></a> 协议授权。</th:block>
+            <th:block th:case="by-nc"><strong>版权所有：</strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i><span th:text="${#strings.toUpperCase(theme.config.basic.creative_commons.license)}"></span></a> 协议授权。</th:block>
+            <th:block th:case="by-nc-nd"><strong>版权所有：</strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i><span th:text="${#strings.toUpperCase(theme.config.basic.creative_commons.license)}"></span></a> 协议授权。</th:block>
+            <th:block th:case="by-nc-sa"><strong>版权所有：</strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i><span th:text="${#strings.toUpperCase(theme.config.basic.creative_commons.license)}"></span></a> 协议授权。</th:block>
+            <th:block th:case="by-nd"><strong>版权所有：</strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nd/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i><span th:text="${#strings.toUpperCase(theme.config.basic.creative_commons.license)}"></span></a> 协议授权。</th:block>
+            <th:block th:case="by-sa"><strong>版权所有：</strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i><span th:text="${#strings.toUpperCase(theme.config.basic.creative_commons.license)}"></span></a> 协议授权。</th:block>
+            <th:block th:case="cc-zero"><strong>版权所有：</strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i><span th:text="${#strings.toUpperCase(theme.config.basic.creative_commons.license)}"></span></a> 协议授权。</th:block>
         </li>
     </ul>
 </div>
