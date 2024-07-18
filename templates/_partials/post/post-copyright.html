@@ -8,7 +8,7 @@
         <th:block th:if="${post.status.permalink ne null}">
         <li class="post-copyright-link">
             <strong>文章链接: </strong>
-            <a th:href="${post.status.permalink}" th:text="${site.url + #strings.substring(post.status.permalink,1)}" title="Welcome to the NexT Organization!">http://example.com/2020/03/01/hexo-theme-next/</a>
+            <a th:href="${post.status.permalink}" th:text="${site.url + post.status.permalink}" title="Welcome to the NexT Organization!">http://example.com/2020/03/01/hexo-theme-next/</a>
         </li>
         </th:block>
         <li class="post-copyright-license">
