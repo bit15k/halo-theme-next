@@ -2,7 +2,7 @@
 <div class="beian" th:if="${theme.config.footer.beian.enabled eq 1}">
     <a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank" th:text="${theme.config.footer.beian.icp}">京ICP备 1234567890号-1 </a>
     <img src="/uploads/beian.png" alt="">
-    <a th:href="'https://beian.mps.gov.cn/#/query/webSearch?code='+${theme.config.footer.beian.gongan_nid}" rel="noopener" target="_blank" th:text="${theme.config.footer.beian.gongan_num}">京公网安备 1234567890号 </a>
+    <a th:href="'https://beian.mps.gov.cn/#/query/webSearch?code='+${theme.config.footer.beian.gongan_id}" rel="noopener" target="_blank" th:text="${theme.config.footer.beian.gongan_num}">京公网安备 1234567890号 </a>
 </div>
 <!--版权信息 hud-->
 <div class="copyright" th:if="${theme.config.footer.copyright.enabled eq 1}">
