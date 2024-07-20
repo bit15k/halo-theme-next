@@ -32,7 +32,7 @@
       <span class="links-of-author-item">
             <a th:href="${account.url}" th:title="${account.name}+' → '+${account.url}"
                rel="noopener me" target="_blank">
-                <i th:class="${account.icon}+' fa-fw'"></i><span th:if="${account.icons_only ne 1}" th:text="${account.name}">Github</span>
+                <i th:class="${account.icon}+' fa-fw'"></i><span th:if="${theme.config.sidebar.social.icons_only ne 1}" th:text="${account.name}">社交名称</span>
             </a>
       </span>
     </th:block>

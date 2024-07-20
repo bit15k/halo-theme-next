@@ -475,7 +475,7 @@ spec:
           label:
           value:
             enabled: 1
-            account: [{"name":"GitHub","url":"https://www.logdict.com","icon":"fab fa-github"}]
+            account: [{"name":"GitHub","url":"https://github.com/bit15k","icon":"fab fa-github"},{"name":"QQ","url":"https://qm.qq.com/q/z45cKGUz6w","icon":"fab fa-qq"}]
             icons_only: 1
           children:
             - $formkit: select
@@ -819,7 +819,7 @@ spec:
           label: 文章底部社交账号栏
           value:
             enabled: 1
-            account: [{"name":"QQ","url":"https://qm.qq.com/q/z45cKGUz6w","icon":"fab fa-qq","type":"img","img_url":"https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/contact-qq.jpg"}]
+            account: [{"name":"QQ","url":"https://qm.qq.com/q/z45cKGUz6w","icon":"fab fa-qq","type":"img","img_url":"https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/contact-qq.jpg"},{"name":"GitHub","url":"https://www.logdict.com/","icon":"fab fa-github","type":"url","img_url":"https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/contact-qq.jpg"}]
             icons_only: 1
           children:
             - $formkit: select
