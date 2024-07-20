@@ -26,12 +26,18 @@
     </nav>
 </div>
 <!--社交信息栏目-->
-<!--<div class="links-of-author animated">-->
-<!--                      <span class="links-of-author-item">-->
-<!--                        <a href="https://github.com/yourname" title="GitHub → https://github.com/yourname"-->
-<!--                           rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>-->
-<!--                      </span>-->
-<!--</div>-->
+<th:block th:if="${theme.config.sidebar.social.enabled eq 1}">
+<div class="links-of-author animated">
+    <th:block th:each="account:${theme.config.sidebar.social.account}">
+      <span class="links-of-author-item">
+            <a th:href="${account.url}" th:title="${account.name}+' → '+${account.url}"
+               rel="noopener me" target="_blank">
+                <i th:class="${account.icon}+' fa-fw'"></i><span th:if="${account.icons_only ne 1}" th:text="${account.name}">Github</span>
+            </a>
+      </span>
+    </th:block>
+</div>
+</th:block>
 <!--版权许可信息-->
 <th:block th:if="${theme.config.basic.creative_commons.enabled eq 1 and theme.config.basic.creative_commons.sidebar eq 1}">
     <div class="cc-license animated" itemprop="license" th:switch="${theme.config.basic.creative_commons.license}">

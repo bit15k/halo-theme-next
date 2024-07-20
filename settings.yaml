@@ -462,7 +462,7 @@ spec:
         # 侧栏是否显示分类标签统计
         - $formkit: select
           name: site_state
-          label: 帖子/分类/标签计数栏
+          label: "帖子/分类/标签栏"
           value: 1
           options:
             - label: 显示
@@ -470,40 +470,54 @@ spec:
             - label: 隐藏
               value: 0
 #        # 侧栏社交链接
-#        - $formkit: group
-#          name: social
-#          label: 社交链接栏
-#          value: [ ]
-#          children:
-#            - $formkit: select
-#              name: enabled
-#              label: 是否开启
-#              value: 1
-#              options:
-#                - label: 开启
-#                  value: 1
-#                - label: 关闭
-#                  value: 0
-#            - $formkit: repeater
-#              if: "$value.enabled === 1"
-#              name: account
-#              label: 社交账号
-#              value: [ ]
-#              max: 5
-#              min: 1
-#              children:
-#                - $formkit: text
-#                  name: name
-#                  label: 名称
-#                  value: ""
-#                - $formkit: text
-#                  name: url
-#                  label: 地址
-#                  value: ""
-#                - $formkit: text
-#                  name: icon
-#                  label: 图标
-#                  value: ""
+        - $formkit: group
+          name: social
+          label:
+          value:
+            enabled: 1
+            account: [{"name":"GitHub","url":"https://www.logdict.com","icon":"fab fa-github"}]
+            icons_only: 1
+          children:
+            - $formkit: select
+              name: enabled
+              label: 社交账号展示栏
+              value: 1
+              options:
+                - label: 开启
+                  value: 1
+                - label: 关闭
+                  value: 0
+            - $formkit: select
+              if: "$value.enabled === 1"
+              name: icons_only
+              label: 只显示图标
+              value: 1
+              options:
+                - label: 开启
+                  value: 1
+                - label: 关闭
+                  value: 0
+            - $formkit: repeater
+              if: "$value.enabled === 1"
+              name: account
+              label: 社交账号
+              value: [{"name":"GitHub","url":"https://www.logdict.com","icon":"fab fa-github"}]
+              max: 5
+              min: 1
+              children:
+                - $formkit: text
+                  name: name
+                  label: 名称
+                  value: ""
+                  help: "如 GitHub"
+                - $formkit: text
+                  name: url
+                  label: 地址
+                  value: ""
+                - $formkit: text
+                  name: icon
+                  label: 图标
+                  value: ""
 #            - $formkit: select
 #              if: "$value.enabled === 1"
 #              name: transition
