@@ -1,0 +1,18 @@
+<div class="followme">
+    <span>欢迎关注我的其他频道</span>
+
+    <div class="social-list">
+
+        <div class="social-item" th:each="account:${theme.config.post.follow_me.account}">
+            <a target="_blank" class="social-link" th:href="${account.url}">
+            <span class="icon">
+              <i th:class="${account.icon}"></i>
+            </span>
+
+                <span class="label" th:text="${account.name}">Twitter</span>
+            </a>
+            <img th:if="${account.type eq 'img'}" class="social-item-img" style="z-index: 1000" th:src="${account.img_url}">
+        </div>
+
+    </div>
+</div>

@@ -813,6 +813,68 @@ spec:
                 value: 1
               - label: 关闭
                 value: 0
+        # 文章底栏社交链接
+        - $formkit: group
+          name: follow_me
+          label: 文章底部社交账号栏
+          value:
+            enabled: 1
+            account: [{"name":"QQ","url":"https://qm.qq.com/q/z45cKGUz6w","icon":"fab fa-qq","type":"img","img_url":"https://cdn.jsdelivr.net/gh/bit15k/halo-theme-next@master/templates/assets/imgs/default/contact-qq.jpg"}]
+            icons_only: 1
+          children:
+            - $formkit: select
+              name: enabled
+              label: ""
+              value: 1
+              options:
+                - label: 开启
+                  value: 1
+                - label: 关闭
+                  value: 0
+            - $formkit: select
+              if: "$value.enabled === 1"
+              name: icons_only
+              label: 只显示图标
+              value: 1
+              options:
+                - label: 开启
+                  value: 1
+                - label: 关闭
+                  value: 0
+            - $formkit: repeater
+              if: "$value.enabled === 1"
+              name: account
+              label: 社交账号
+              max: 5
+              min: 1
+              children:
+                - $formkit: text
+                  name: name
+                  label: 名称
+                  value: ""
+                  help: "如 GitHub"
+                - $formkit: select
+                  name: type
+                  label: 类型
+                  options:
+                    - label: 链接
+                      value: "url"
+                    - label: 图片
+                      value: "img"
+                  help: "设置是图片还是链接，选择图片鼠标浮动会弹出图片，一般用于二维码"
+                - $formkit: text
+                  name: url
+                  label: 地址
+                  value: ""
+                - $formkit: text
+                  if: "$value.type === 'img'"
+                  name: img_url
+                  label: 图片地址
+                  value: ""
+                - $formkit: text
+                  name: icon
+                  label: 图标
+                  value: ""
 
     # 其他设置-----------------------------------------------------------------------------------------
     - group: other

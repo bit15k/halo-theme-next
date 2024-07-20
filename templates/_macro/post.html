@@ -96,6 +96,10 @@
                     <!--        </a>-->
                     <!--    </div>-->
                     <!--</div>-->
+                    <!--文章底部社交账号关注    -->
+                    <th:block th:if="${theme.config.post.follow_me.enabled eq 1}">
+                        <th:block th:replace="_partials/post/post-followme.html"></th:block>
+                    </th:block>
                 </th:block>
             </footer>
 
