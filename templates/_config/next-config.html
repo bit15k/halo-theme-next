@@ -1,0 +1,75 @@
+<th:block >
+    <script class="next-config" data-name="main" type="application/json" th:inline="javascript">
+        {
+            "hostname": [[${site.url}]],
+            "root": "/",
+            "images": "/images",
+            "scheme": [[${theme.config.basic.scheme}]],
+            "darkmode": [[${theme.config.basic.darkmode}?'true':'false']],
+            "version": [[${theme.spec.version}]],
+            "exturl": false,
+            "sidebar": {
+                "position": [[${theme.config.sidebar.sidebar.position}]],
+                "width_expanded": [[${theme.config.sidebar.sidebar.width_expanded}]],
+                "width_dual_column": [[${theme.config.sidebar.sidebar.width_dual_column}]],
+                "display": [[${theme.config.sidebar.sidebar.display}]],
+                "padding": [[${theme.config.sidebar.sidebar.padding}]],
+                "offset": [[${theme.config.sidebar.sidebar.offset}]]
+            },
+            "hljswrap": true,
+            "copycode": {
+                "enable": false,
+                "style": null
+            },
+            "fold": {
+                "enable": false,
+                "height": 500
+            },
+            "bookmark": {
+                "enable": true,
+                "color": "#222",
+                "save": "auto"
+            },
+            "mediumzoom": false,
+            "lazyload": false,
+            "pangu": false,
+            "comments": {
+                "style": "tabs",
+                "active": null,
+                "storage": true,
+                "lazyload": false,
+                "nav": null
+            },
+            "stickytabs": false,
+            "motion": {
+                "enable": true,
+                "async": false,
+                "transition": {
+                    "menu_item": "fadeInDown",
+                    "post_block": "fadeIn",
+                    "post_header": "fadeInDown",
+                    "post_body": "fadeInDown",
+                    "coll_header": "fadeInLeft",
+                    "sidebar": "fadeInUp"
+                }
+            },
+            "i18n": {
+                "placeholder": "Searching...",
+                "empty": "We didn't find any results for the search: ${query}",
+                "hits_time": "${hits} results found in ${time} ms",
+                "hits": "${hits} results found"
+            }
+        }
+    </script>
+    <script class="next-config" data-name="page" type="application/json">{
+        "sidebar": "",
+        "isHome": true,
+        "isPost": false,
+        "lang": "en",
+        "comments": "",
+        "permalink": "",
+        "path": "index.html",
+        "title": ""
+    }</script>
+
+</th:block>

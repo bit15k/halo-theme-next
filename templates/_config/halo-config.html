@@ -1,0 +1,58 @@
+<th:block xmlns:th="https://www.thymeleaf.org">
+    <!--注入主题方案-->
+    <!--开发用-->
+    <!--<link th:href="@{/assets/css/main.css?v={version}(version=${theme.spec.version})}" rel="stylesheet">-->
+    <link th:href="@{/assets/css/scheme/{scheme}.css?v={version}(version=${theme.spec.version},scheme=${theme.config.basic.scheme})}" rel="stylesheet">
+    <!--通用属性-->
+    <style th:inline="css" xmlns:th="https://www.thymeleaf.org">
+        /* 亮色模式颜色 */
+        :root {
+            --theme-color: /*[(${theme.config.other.theme_color.light})]*/ #222;
+        }
+        /* 暗色模式颜色 */
+        /*[# th:if="${theme.config.basic.darkmode eq 1}"]*/
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --body-bg-color: #282828;
+                --content-bg-color: #333;
+                --card-bg-color: #555;
+                --text-color: #ccc;
+                --blockquote-color: #bbb;
+                --link-color: #ccc;
+                --link-hover-color: #eee;
+                --brand-color: #ddd;
+                --brand-hover-color: #ddd;
+                --table-row-odd-bg-color: #282828;
+                --table-row-hover-bg-color: #363636;
+                --menu-item-bg-color: #555;
+
+                --theme-color: /*[(${theme.config.other.theme_color.dark})]*/ #222;
+
+                --btn-default-bg: #222;
+                --btn-default-color: #ccc;
+                --btn-default-border-color: #555;
+                --btn-default-hover-bg: #666;
+                --btn-default-hover-color: #ccc;
+                --btn-default-hover-border-color: #666;
+                --highlight-background: #f3f3f3;
+                --highlight-foreground: #444;
+                --highlight-gutter-background: #e1e1e1;
+                --highlight-gutter-foreground: #555;
+                color-scheme: dark;
+            }
+            img {
+                opacity: 0.75;
+            }
+            img:hover {
+                opacity: 0.9;
+            }
+            iframe {
+                color-scheme: light;
+            }
+        }
+
+        /*[/]*/
+
+
+    </style>
+</th:block>
