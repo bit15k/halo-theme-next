@@ -40,15 +40,17 @@ spec:
         - $formkit: select
           name: scheme
           label: 布局方案
-          help: "后续将支持更多方案"
+          help: ""
           value: "Pisces"
           options:
-#            - label: Muse
-#              value: "Muse"
-#            - label: Mist
-#              value: "Mist"
+            - label: Muse
+              value: "Muse"
+            - label: Mist
+              value: "Mist"
             - label: Pisces
               value: "Pisces"
+            - label: Gemini
+              value: "Gemini"
 #            - label: Gemini
 #              value: "Gemini"
         # 暗黑模式
@@ -58,8 +60,8 @@ spec:
           help: "后续将支持"
           value: 0
           options:
-#            - label: 开启
-#              value: 1
+            - label: 开启
+              value: 1
             - label: 关闭
               value: 0
         # 自定义favicon 图标
@@ -343,7 +345,7 @@ spec:
             display: "always"
             position: "left"
             advanced: 0
-            width_expanded: "320"
+            width_expanded: 320
             width_dual_column: "240"
             padding: "18"
             offset: "12"
@@ -354,12 +356,12 @@ spec:
               label: 显示模式
               value: "always"
               options:
-#                - label: 文章页
-#                  value: "post"
+                - label: 文章页
+                  value: "post"
                 - label: 总是显示
                   value: "always"
-#                - label: 隐藏
-#                  value: "hide"
+                - label: 隐藏
+                  value: "hide"
                 - label: 移除
                   value: "remove"
             - $formkit: select
@@ -370,8 +372,8 @@ spec:
               options:
                 - label: 左侧
                   value: "left"
-#                - label: 右侧
-#                  value: "right"
+                - label: 右侧
+                  value: "right"
             - $formkit: select
               name: advanced
               id: sidebar_sidebar_advanced
@@ -379,16 +381,17 @@ spec:
               label: 高级设置
               value: 0
               options:
-#                - label: 自定义
-#                  value: 1
+                - label: 自定义
+                  value: 1
                 - label: 默认
                   value: 0
-            - $formkit: text
+            - $formkit: number
               if: "$value.advanced == 1"
               name: width_expanded
               label: width_expanded
               help: "width_expanded"
-              value: "320"
+              number: float
+              value: 320
             - $formkit: text
               if: "$value.advanced == 1"
               name: width_dual_column
@@ -892,12 +895,12 @@ spec:
               name: light
               label: 正常模式颜色
               value: "#222"
-              language: yaml
+              language: css
             - $formkit: code
               name: dark
               label: 暗黑模式颜色
               value: "#222"
-              language: yaml
+              language: css
         # 预链接
 #        - $formkit: radio
 #          name: preconnect
