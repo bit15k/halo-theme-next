@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org"
-      th:replace="~{_layout :: html(head = null,content = ~{::content}, sidebar = ~{::sidebar}, have_comment = 0, class = 'page posts-expand', is_home = 1, is_archive = 0)}"
+      th:replace="~{_layout :: html(head = null, title = '标签',content = ~{::content}, sidebar = ~{::sidebar}, have_comment = 0, class = 'page posts-expand', is_home = 1, is_archive = 0)}"
 >
     <!--分类集合-->
     <th:block th:fragment="content">

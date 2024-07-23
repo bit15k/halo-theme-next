@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org" th:replace="~{_layout :: html(head = null,content = ~{::content}, sidebar = ~{::sidebar}, class = 'index posts-expand', is_home = 1, is_archive = 0, have_comment = 0)}">
+<html xmlns:th="https://www.thymeleaf.org" th:replace="~{_layout :: html(head = null,title = '',content = ~{::content}, sidebar = ~{::sidebar}, class = 'index posts-expand', is_home = 1, is_archive = 0, have_comment = 0)}">
     <!--首页文章列表-->
     <th:block th:fragment="content">
         <th:block th:each="post : ${posts.items}">

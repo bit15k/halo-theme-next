@@ -2,7 +2,7 @@
 
 
 <!--整体布局-->
-<html lang="zh" xmlns:th="https://www.thymeleaf.org" th:fragment="html(head,content,sidebar,class,is_home,is_archive,have_comment)">
+<html lang="zh" xmlns:th="https://www.thymeleaf.org" th:fragment="html(head,title,content,sidebar,class,is_home,is_archive,have_comment)">
     <!--头部部分-->
     <head>
         <!--引入head-->
@@ -10,7 +10,9 @@
         <!--引入head-unique 未做 临时填充-->
         <th:block th:replace="_partials/head/head-unique"></th:block>
         <!--站点标题-->
-        <title th:text="${site.title}">标题</title>
+        <title th:if="${title ne '' }" th:text="${title + ' - '} + ${site.title}">标题</title>
+        <title th:if="${title eq '' }" th:text="${site.title}">标题</title>
+
         <!--hud 引入第三方统计代码-->
         <!--<th:block th:replace="_third-party/analytics/index"></th:block>-->
 
