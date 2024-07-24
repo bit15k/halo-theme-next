@@ -2,14 +2,14 @@
     <!--注入主题方案-->
     <!--开发用-->
     <!--<link th:href="@{/assets/css/main.css?v={version}(version=${theme.spec.version})}" rel="stylesheet">-->
-    <link th:href="@{/assets/css/scheme/{scheme}.css?v={version}(version=${theme.spec.version},scheme=${theme.config.basic.scheme})}" rel="stylesheet">
+    <link th:href="@{/assets/css/scheme/{scheme}/{scheme}_{position}.css?v={version}(version=${theme.spec.version},scheme=${theme.config.basic.scheme},position=${theme.config.sidebar.sidebar.position})}" rel="stylesheet">
     <!--通用属性-->
-    <style th:inline="css" xmlns:th="https://www.thymeleaf.org">
+    <style th:inline="css" xmlns:th="https://www.thymeleaf.org" rel="stylesheet">
         /* 亮色模式颜色 */
         :root {
             --theme-color: /*[(${theme.config.other.theme_color.light})]*/ #222;
         }
-        /* 暗色模式颜色 */
+         /*暗色模式颜色*/
         /*[# th:if="${theme.config.basic.darkmode eq 1}"]*/
         @media (prefers-color-scheme: dark) {
             :root {
@@ -50,8 +50,92 @@
                 color-scheme: light;
             }
         }
-
         /*[/]*/
+        /*侧边栏位置*/
+        /*[# th:if="${theme.config.sidebar.sidebar.position eq 'right'}"]*/
+        @media (max-width: 991px) {
+            .sidebar {
+                /*[(${theme.config.sidebar.sidebar.position}+': -320px')]*/;
+            }
+
+            .sidebar-active .sidebar {
+                /*[(${theme.config.sidebar.sidebar.position}+': 0')]*/;
+            }
+        }
+        .toggle.toggle-arrow :first-child {
+            top: 2px;
+            transform: rotate(-45deg);
+            width: 50%;
+        }
+        @media (any-hover: hover) {
+            body:not(.sidebar-active) .sidebar-toggle:hover :first-child {
+                top: 2px;
+                transform: rotate(-45deg);
+                width: 50%;
+            }
+        }
+        .toggle.toggle-close :first-child {
+            top: 6px;
+            transform: rotate(-45deg);
+        }
+        .sidebar-active .sidebar-toggle :first-child {
+            top: 6px;
+            transform: rotate(-45deg);
+        }
+        @media (max-width: 991px) {
+            .book-mark-link {
+                left: 20px;
+            }
+        }
+        @media (max-width: 991px) {
+            .sidebar-toggle {
+                right: 20px!important;
+            }
+        }
+        /*[/]*/
+        /*[# th:if="${theme.config.sidebar.sidebar.position eq 'left'}"]*/
+        @media (max-width: 991px) {
+            .sidebar {
+                left: -320px;
+            }
+            .sidebar-active .sidebar {
+                left: 0;
+            }
+        }
+        .toggle.toggle-arrow :first-child {
+            left: 50%;
+            top: 2px;
+            transform: rotate(45deg);
+            width: 50%;
+        }
+        @media (any-hover: hover) {
+            body:not(.sidebar-active) .sidebar-toggle:hover :first-child {
+                left: 50%;
+                top: 2px;
+                transform: rotate(45deg);
+                width: 50%;
+            }
+        }
+        .toggle.toggle-close :first-child {
+            top: 6px;
+            transform: rotate(45deg);
+        }
+        .sidebar-active .sidebar-toggle :first-child {
+            top: 6px;
+            transform: rotate(45deg);
+        }
+        @media (max-width: 991px) {
+            .book-mark-link {
+                right: 20px;
+            }
+        }
+        @media (max-width: 991px) {
+            .sidebar-toggle {
+                left: 20px;
+            }
+        }
+        /*[/]*/
+
 
 
     </style>

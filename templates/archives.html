@@ -7,7 +7,7 @@
         <div class="post-block animated fadeIn">
             <div class="post-content">
                 <div class="collection-title">
-                    <span class="collection-header animated fadeInLeft">Good! 85 posts in total. Keep on posting.</span>
+                    <span class="collection-header animated fadeInLeft">共计 <span th:text="${archives.total}"></span> 篇文章。</span>
                 </div>
                 <th:block th:each="archive : ${archives.items}">
                     <div class="collection-year">
@@ -35,6 +35,7 @@
                 </th:block>
             </div>
         </div>
+        <th:block th:replace="~{_partials/pagination::render(posts = ${archives}, type = 'archives')}"></th:block>
     </th:block>
     <th:block th:fragment="sidebar" th:replace="~{_macro/sidebar::render(display_toc=0)}"></th:block>
 

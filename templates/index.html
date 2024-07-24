@@ -6,7 +6,7 @@
             <th:block th:replace="~{_macro/post :: post(post = ${post},is_index = 1,is_page = 0)}"></th:block>
         </th:block>
         <!--翻页 hud-->
-        <th:block th:replace="_partials/pagination"></th:block>
+        <th:block th:replace="_partials/pagination::render(posts = ${posts},type = 'posts')"></th:block>
     </th:block>
     <!--主页用户头像 文章目录侧栏-->
     <th:block th:fragment="sidebar" th:replace="~{_macro/sidebar::render(display_toc=null)}"></th:block>
