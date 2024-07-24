@@ -420,10 +420,12 @@ spec:
             rounded: 0
             rotated: 0
           children:
-            - $formkit: text
+            - $formkit: attachment
               name: url
               label: 地址
-              help: ""
+              help: "默认不填写则读取站点LOGO"
+              accepts:
+                - "image/*"
               value: ""
 #            - $formkit: select
 #              name: rounded
