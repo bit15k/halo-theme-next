@@ -35,7 +35,7 @@
             <span class="post-meta-item-text">I</span>
             <th:block th:each="category:${post.categories}">
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Sports/" itemprop="url" rel="index"><span itemprop="name" th:text="${category.spec.displayName}">Sports</span></a>
+                  <a th:href="${category.status.permalink}" itemprop="url" rel="index"><span itemprop="name" th:text="${category.spec.displayName}">Sports</span></a>
                 </span>
             </th:block>
         </span>
